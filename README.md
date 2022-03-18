@@ -2,7 +2,7 @@
 
 ### Group Leader - IT20614430 - Senara Perera (seniboo)
 ### Member 2 - IT20618568 - (Nabouru)
-### Member 3 - IT20619794 - (SenalWeerasekara)
+### Member 3 - IT20619794 - Senal Weerasekara (SenalWeerasekara)
 ### Member 4 - IT20617264 - (InuriHapuarachchi)
 
 #### Brief Description of Project 
