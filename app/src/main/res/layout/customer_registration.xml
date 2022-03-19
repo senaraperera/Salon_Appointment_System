@@ -42,10 +42,11 @@
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
         android:text="SIGN UP"
-        android:textColor="#311B92"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck"
         tools:layout_editor_absoluteY="523dp" />
 
     <EditText
