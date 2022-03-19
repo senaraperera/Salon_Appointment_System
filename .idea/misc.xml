@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2875" />
+        <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_appointments.xml" value="0.2833333333333333" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_edit_profile.xml" value="0.25" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_login.xml" value="0.25" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_registration.xml" value="0.25" />
