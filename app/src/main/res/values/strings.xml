@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Salon Appointment System</string>
+    <string name="services">service details</string>
+    <string name="salon_services">service details</string>
+    <string name="salon_services_functions">add new service</string>
+    <string name="salon_services_remove">remove services</string>
 </resources>
