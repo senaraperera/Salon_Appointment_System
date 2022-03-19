@@ -6,10 +6,12 @@
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/customer_login.xml" value="0.25" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/customer_registration.xml" value="0.25" />
+        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/customer_login.xml" value="0.1671875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
