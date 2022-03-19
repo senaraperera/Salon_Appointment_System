@@ -18,4 +18,17 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    
+    <string name="checkoutTab">CHECKOUT</string>
+    <string name="appointmentTab">APPOINTMENT</string>
+    <string name="salonName">Salon Name</string>
+    <string name="category_Select">SELECT CATEGORY</string>
+    <string name="select_Style">SELECT STYLE</string>
+    <string-array name="categories">
+        <item>Hair Style</item>
+        <item>Nail Art</item>
+        <item>Bridal Dressing</item>
+        <item>Massages</item>
+        <item>Saree Draping</item>
+    </string-array>
 </resources>
