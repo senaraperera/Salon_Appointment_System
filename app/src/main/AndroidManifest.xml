@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem" >
         <activity
+            android:name=".customer_appointments"
+            android:exported="false"
+            android:label="@string/title_activity_customer_appointments"
+            android:theme="@style/Theme.SalonAppointmentSystem.NoActionBar" />
+        <activity
             android:name=".customer_edit_profile"
             android:exported="false" />
         <activity
