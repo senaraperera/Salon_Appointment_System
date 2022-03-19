@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Salon Appointment System</string>
+    <string name="app_name">SALON BOOKER</string>
+    <string name="loginbox">Enter Email</string>
+    <string name="loginButton">LOGIN</string>
+    <string name="loginbox1">Enter Email</string>
+    <string name="loginbox2">Enter Password</string>
+    <string name="regName">Enter Name</string>
+    <string name="regEmail">Enter Email</string>
+    <string name="regPhone">Enter Phone</string>
+    <string name="regPass">Enter Password</string>
+    <string name="regConPass">Confirm Password</string>
 </resources>
