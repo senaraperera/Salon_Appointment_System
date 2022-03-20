@@ -30,15 +30,11 @@
         <item>Massages</item>
         <item>Saree Draping</item>
     </string-array>
-    <string name="title_activity_customer_appointments">customer_appointments</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="select_Date">DD/MM/YYYY</string>
     <string name="go_To_Checkout">GO TO CHECKOUT</string>
+    <string name="cat_Type1">Hair Styles</string>
+    <string name="cat_Type2">Bridal</string>
+    <string name="cat_Type3">Massages</string>
+    <string name="cat_Type4">Nail Art</string>
+    <string name="hairdo_logo">HairDo Logo</string>
 </resources>
