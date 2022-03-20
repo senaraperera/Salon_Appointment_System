@@ -41,4 +41,13 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="select_Date">DD/MM/YYYY</string>
     <string name="go_To_Checkout">GO TO CHECKOUT</string>
+    <string name="salonAppointment">+ APPOINTMENT</string>
+    <string name="salonServices">SERVICES</string>
+    <string name="salondes">DESCRITPION</string>
+    <string name="salonDescription">DESCRIPTION</string>
+    <string name="salonLocation">LOCATION</string>
+    <string name="addPrice">Service Price</string>
+    <string name="serviceDuration">Duration</string>
+    <string name="serviceDescription">DESCRIPTION</string>
+    <string name="addName">Service Name</string>
 </resources>
