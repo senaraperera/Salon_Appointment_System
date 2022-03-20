@@ -8,8 +8,9 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="153dp"
         android:layout_marginTop="276dp"
         android:width="130dp"
         android:text="@string/salonServices"
@@ -20,8 +21,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="54dp"
         android:layout_marginTop="276dp"
         android:text="@string/salonDescription"
         app:layout_constraintEnd_toStartOf="@+id/button8"
@@ -31,8 +32,8 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
         android:layout_marginTop="276dp"
         android:layout_marginEnd="4dp"
         android:width="130dp"
