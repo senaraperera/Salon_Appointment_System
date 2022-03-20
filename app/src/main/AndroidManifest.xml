@@ -14,9 +14,6 @@
             android:name=".customer_appointments"
             android:exported="false" />
         <activity
-            android:name=".customer_checkout1"
-            android:exported="false" />
-        <activity
             android:name=".homepage"
             android:exported="false" />
         <activity
@@ -35,5 +32,5 @@
             </intent-filter>
         </activity>
     </application>
-// somthingggg
+
 </manifest>
