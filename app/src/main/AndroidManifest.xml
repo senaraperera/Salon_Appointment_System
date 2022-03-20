@@ -10,8 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
-
-
+        <activity
+            android:name=".editProfile"
+            android:exported="false" />
+        <activity
+            android:name=".salonProfile"
+            android:exported="false" />
+        <activity
+            android:name=".updatedPassword"
+            android:exported="false" />
+        <activity
+            android:name=".changePassword"
+            android:exported="false" />
         <activity
             android:name=".customer_checkout1"
             android:exported="false" />
