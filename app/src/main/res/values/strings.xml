@@ -44,4 +44,8 @@
     <string name="AppointmentName">"Appointment "</string>
     <string name="loginButt">LOGIN</string>
     <string name="botNaveHome">Home</string>
+    <string name="cusDashName">User Name</string>
+    <string name="salonManagePenelties">MANAGE PENELTIES</string>
+    <string name="salonDash">LOOKS SALON</string>
+    <string name="saloonApp">Today\'s Appointments</string>
 </resources>
