@@ -41,4 +41,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="select_Date">DD/MM/YYYY</string>
     <string name="go_To_Checkout">GO TO CHECKOUT</string>
+    <string name="AppointmentName">"Appointment "</string>
+    <string name="loginButt">LOGIN</string>
+    <string name="botNaveHome">Home</string>
 </resources>
