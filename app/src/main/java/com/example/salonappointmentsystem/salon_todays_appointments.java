@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class customer_appointments extends AppCompatActivity {
+public class salon_todays_appointments extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_appointments);
+        setContentView(R.layout.activity_salon_todays_appointments);
     }
 }

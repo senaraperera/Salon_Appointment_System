@@ -86,7 +86,7 @@
         android:id="@+id/view"
         android:layout_width="411dp"
         android:layout_height="100dp"
-        android:background="#000000"
+        android:background="#8CBBF1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
