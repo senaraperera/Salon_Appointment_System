@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
+            android:name=".salonRegistration_page2"
+            android:exported="false" />
+        <activity
             android:name=".salonRegistration"
             android:exported="false" />
         <activity
