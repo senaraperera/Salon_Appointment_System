@@ -13,13 +13,14 @@ public class customer_checkout1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_checkout1);
 
-        Spinner mySpinner1 = (Spinner) findViewById(R.id.category_Spinner);
+        Spinner mySpinner1 = findViewById(R.id.category_Spinner);
 
         //get data
-        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(customer_checkout1.this,
+        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(customer_checkout1.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.categories));
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //allow adapter to show the data inside spinner
         mySpinner1.setAdapter(categoryAdapter);
+
     }
 }
