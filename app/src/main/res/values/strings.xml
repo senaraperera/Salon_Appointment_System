@@ -30,22 +30,23 @@
         <item>Massages</item>
         <item>Saree Draping</item>
     </string-array>
-    <string name="title_activity_customer_appointments">customer_appointments</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="select_Date">DD/MM/YYYY</string>
     <string name="go_To_Checkout">GO TO CHECKOUT</string>
-    <string name="AppointmentName">"Appointment "</string>
-    <string name="loginButt">LOGIN</string>
-    <string name="botNaveHome">Home</string>
-    <string name="cusDashName">User Name</string>
-    <string name="salonManagePenelties">MANAGE PENELTIES</string>
-    <string name="salonDash">LOOKS SALON</string>
-    <string name="saloonApp">Today\'s Appointments</string>
+
+    <string name="cat_Type1">Hair Styles</string>
+    <string name="cat_Type2">Bridal</string>
+    <string name="cat_Type3">Massages</string>
+    <string name="cat_Type4">Nail Art</string>
+    <string name="hairdo_logo">HairDo Logo</string>
+    <string name="salonAppointment">+ APPOINTMENT</string>
+    <string name="salonServices">SERVICES</string>
+    <string name="salondes">DESCRITPION</string>
+    <string name="salonDescription">DESCRIPTION</string>
+    <string name="salonLocation">LOCATION</string>
+    <string name="addPrice">Service Price</string>
+    <string name="serviceDuration">Duration</string>
+    <string name="serviceDescription">DESCRIPTION</string>
+    <string name="addName">Service Name</string>
+
+
 </resources>
