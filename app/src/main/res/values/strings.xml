@@ -37,4 +37,14 @@
     <string name="cat_Type3">Massages</string>
     <string name="cat_Type4">Nail Art</string>
     <string name="hairdo_logo">HairDo Logo</string>
+    <string name="salonAppointment">+ APPOINTMENT</string>
+    <string name="salonServices">SERVICES</string>
+    <string name="salondes">DESCRITPION</string>
+    <string name="salonDescription">DESCRIPTION</string>
+    <string name="salonLocation">LOCATION</string>
+    <string name="addPrice">Service Price</string>
+    <string name="serviceDuration">Duration</string>
+    <string name="serviceDescription">DESCRIPTION</string>
+    <string name="addName">Service Name</string>
+
 </resources>
