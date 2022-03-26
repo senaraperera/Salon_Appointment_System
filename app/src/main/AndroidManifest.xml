@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
+            android:name=".checkout1"
+            android:exported="false" />
+        <activity
             android:name=".customer_appointments"
             android:exported="false" />
         <activity

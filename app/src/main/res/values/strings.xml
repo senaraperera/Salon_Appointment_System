@@ -46,5 +46,8 @@
     <string name="serviceDuration">Duration</string>
     <string name="serviceDescription">DESCRIPTION</string>
     <string name="addName">Service Name</string>
+    <string name="catType">Hair Style</string>
+    <string name="category_Style">SELECT STYLE</string>
+    <string name="dateEntry">DD/MM/YYYY</string>
 
 </resources>

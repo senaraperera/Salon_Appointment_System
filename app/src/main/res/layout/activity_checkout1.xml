@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".checkout1">
+
+    <Button
+        android:id="@+id/btnAppoint"
+        android:layout_width="194dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/checkoutTab"
+        android:textColor="@color/textColor"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCheck" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/appointmentTab"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/btnAppoint"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/salonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/salonName"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/category_Select"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salonName" />
+
+    <TextView
+        android:id="@+id/selectStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/category_Style"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_Category" />
+
+    <TextView
+        android:id="@+id/selectStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/category_Style"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_Style" />
+
+    <Spinner
+        android:id="@+id/spin_Category"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/catType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Spinner
+        android:id="@+id/spin_Style"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/catType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectStyle" />
+
+    <Button
+        android:id="@+id/goToCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/pastelBlue"
+        android:text="@string/go_To_Checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/dateEntry"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectStyle2"
+        android:autofillHints="" />
+</androidx.constraintlayout.widget.ConstraintLayout>
