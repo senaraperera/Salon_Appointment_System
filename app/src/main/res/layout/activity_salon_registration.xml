@@ -88,7 +88,7 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/updateProfileButton"
         android:layout_width="216dp"
         android:layout_height="57dp"
         android:layout_marginTop="28dp"
@@ -107,6 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfileButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
