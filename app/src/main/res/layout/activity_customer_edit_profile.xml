@@ -7,7 +7,7 @@
     tools:context=".customer_edit_profile">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/updateProfileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -15,27 +15,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword11" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfileConfirmPassword" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName15"
+        android:id="@+id/updateProfilePhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regPhone"
+        android:hint="@string/updateProfilePhone"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="0727294188"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfileEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword10"
+        android:id="@+id/updateProfilePassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -45,14 +44,13 @@
         android:hint="@string/regPass"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:text="1234656885"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfilePhone" />
 
     <EditText
-        android:id="@+id/editTextTextPassword11"
+        android:id="@+id/updateProfileConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -62,14 +60,13 @@
         android:hint="@string/regConPass"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:text="1234567899"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword10" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfilePassword" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/updateProfileName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -77,10 +74,9 @@
         android:layout_marginEnd="50dp"
         android:autoText="false"
         android:ems="10"
-        android:hint="@string/regName"
+        android:hint="@string/updateProfileName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Semora"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,26 +86,25 @@
         android:id="@+id/view4"
         android:layout_width="411dp"
         android:layout_height="100dp"
-        android:background="#000000"
+        android:background="#8CBBF1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/updateProfileEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regEmail"
+        android:hint="@string/updateProfileEmail"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="semora@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfileName" />
 
     <TextView
         android:id="@+id/textView5"
