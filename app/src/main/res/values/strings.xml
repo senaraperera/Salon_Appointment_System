@@ -32,7 +32,6 @@
     </string-array>
     <string name="select_Date">DD/MM/YYYY</string>
     <string name="go_To_Checkout">GO TO CHECKOUT</string>
-
     <string name="cat_Type1">Hair Styles</string>
     <string name="cat_Type2">Bridal</string>
     <string name="cat_Type3">Massages</string>
@@ -40,13 +39,22 @@
     <string name="hairdo_logo">HairDo Logo</string>
     <string name="salonAppointment">+ APPOINTMENT</string>
     <string name="salonServices">SERVICES</string>
-    <string name="salondes">DESCRITPION</string>
+    <string name="salondes">DESCRIPTION</string>
     <string name="salonDescription">DESCRIPTION</string>
     <string name="salonLocation">LOCATION</string>
     <string name="addPrice">Service Price</string>
     <string name="serviceDuration">Duration</string>
     <string name="serviceDescription">DESCRIPTION</string>
     <string name="addName">Service Name</string>
+    <string name="date">SELECT DATE</string>
+    <string name="serviceCheckout2">SERVICE</string>
+    <string name="servbought1">Feather Cut</string>
+    <string name="checkoutamt">1000</string>
+    <string name="appointDate">Appointment Date</string>
+    <string name="appDateValue">26/06/2022</string>
+    <string name="warning">WARNING</string>
+    <string name="warningTxt">*If you cancel your appointment within two days prior to the date reserved, a penalty will be imposed.</string>
+    <string name="checkoutBtn">CHECKOUT</string>
 
 
 </resources>

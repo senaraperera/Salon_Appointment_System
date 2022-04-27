@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pastelBlue"
+    android:background="@color/white"
     tools:context=".homepage">
 
     <Button
@@ -41,7 +41,7 @@
         android:layout_marginEnd="26dp"
         android:backgroundTint="#FCEECB"
         android:text="@string/cat_Type4"
-        android:textColor="#1565C0"
+        android:textColor="@color/textColor"
         app:layout_constraintBaseline_toBaselineOf="@+id/cat_Type3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cat_Type3" />
@@ -51,16 +51,15 @@
         android:layout_width="149dp"
         android:layout_height="48dp"
         android:layout_marginStart="26dp"
-        android:layout_marginBottom="320dp"
         android:backgroundTint="#FCEECB"
         android:text="@string/cat_Type3"
-        android:textColor="#1565C0"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cat_Type4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cat_Type1"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <ImageView
         android:id="@+id/imageView"
