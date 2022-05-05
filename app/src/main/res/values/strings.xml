@@ -18,11 +18,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="checkoutTab">CHECKOUT</string>
-    <string name="appointmentTab">APPOINTMENT</string>
-    <string name="salonName">Salon Name</string>
-    <string name="category_Select">SELECT CATEGORY</string>
-    <string name="select_Style">SELECT STYLE</string>
+
+
+
+
+
     <string-array name="categories">
         <item>Hair Style</item>
         <item>Nail Art</item>
@@ -30,12 +30,8 @@
         <item>Massages</item>
         <item>Saree Draping</item>
     </string-array>
-    <string name="select_Date">DD/MM/YYYY</string>
-    <string name="go_To_Checkout">GO TO CHECKOUT</string>
-    <string name="cat_Type1">Hair Styles</string>
-    <string name="cat_Type2">Bridal</string>
-    <string name="cat_Type3">Massages</string>
-    <string name="cat_Type4">Nail Art</string>
+
+
     <string name="hairdo_logo">HairDo Logo</string>
     <string name="salonAppointment">+ APPOINTMENT</string>
     <string name="salonServices">SERVICES</string>
@@ -46,15 +42,6 @@
     <string name="serviceDuration">Duration</string>
     <string name="serviceDescription">DESCRIPTION</string>
     <string name="addName">Service Name</string>
-    <string name="date">SELECT DATE</string>
-    <string name="serviceCheckout2">SERVICE</string>
-    <string name="servbought1">Feather Cut</string>
-    <string name="checkoutamt">1000</string>
-    <string name="appointDate">Appointment Date</string>
-    <string name="appDateValue">26/06/2022</string>
-    <string name="warning">WARNING</string>
-    <string name="warningTxt">*If you cancel your appointment within two days prior to the date reserved, a penalty will be imposed.</string>
-    <string name="checkoutBtn">CHECKOUT</string>
 
 
 </resources>
