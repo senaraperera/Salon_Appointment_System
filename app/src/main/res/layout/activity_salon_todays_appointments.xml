@@ -12,6 +12,7 @@
         android:layout_height="84dp"
         android:background="#8CBBF1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,7 +20,7 @@
         android:id="@+id/view17"
         android:layout_width="352dp"
         android:layout_height="173dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="116dp"
         android:background="#fceecb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -31,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/saloonApp"
+        android:text="saloon"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/view16"
         app:layout_constraintHorizontal_bias="0.062"
@@ -42,15 +43,19 @@
         android:id="@+id/button18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="16dp"
         android:text="Completed"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="241dp" />
+        app:layout_constraintStart_toStartOf="@+id/view17"
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
 
     <Button
         android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="48dp"
         android:text="Add Penelty"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintStart_toStartOf="@+id/view17"
+        app:layout_constraintTop_toTopOf="@+id/view17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

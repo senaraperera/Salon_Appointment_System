@@ -17,7 +17,7 @@
             android:layout_height="54dp"
             android:layout_marginStart="153dp"
             android:layout_marginTop="272dp"
-            android:text="@string/salonServices"
+            android:text="services"
             app:layout_constraintStart_toStartOf="@+id/button6"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
             android:layout_marginStart="280dp"
             android:layout_marginTop="272dp"
             android:width="130dp"
-            android:text="@string/salonLocation"
+            android:text="location"
             app:layout_constraintStart_toStartOf="@+id/button6"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +39,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="272dp"
             android:width="130dp"
-            android:text="@string/salonDescription"
+            android:text="description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -50,7 +50,7 @@
         android:layout_height="335dp"
         android:layout_marginTop="324dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/salondes"
+        android:text="description"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="88dp"
-        android:text="@string/salonAppointment"
+        android:text="appointments"
         android:textSize="16sp"
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
