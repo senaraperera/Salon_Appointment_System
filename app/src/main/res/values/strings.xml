@@ -38,10 +38,10 @@
     <string name="salondes">DESCRIPTION</string>
     <string name="salonDescription">DESCRIPTION</string>
     <string name="salonLocation">LOCATION</string>
-    <string name="addPrice">Service Price</string>
-    <string name="serviceDuration">Duration</string>
+
     <string name="serviceDescription">DESCRIPTION</string>
-    <string name="addName">Service Name</string>
+
+
 
 
 </resources>
