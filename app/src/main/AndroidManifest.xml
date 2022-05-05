@@ -43,6 +43,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--service activities-->
+        <activity
+            android:name=".salon_edit_service"
+            android:exported="true"/>
+
+        <activity
+            android:name=".salon_add_services"
+            android:exported="true"/>
+
+        <activity
+            android:name=".salonViewServices"
+            android:exported="true"/>
+
+
     </application>
 
 </manifest>
