@@ -3,9 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
-        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_customer_login.xml" value="0.4466666666666667" />
-        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_homepage.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_appointments.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_customer_registration.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_salon_add_services.xml" value="0.2" />
@@ -17,10 +14,14 @@
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/customer_login.xml" value="0.25" />
         <entry key="..\:/Users/Senal Weerasekara/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/customer_registration.xml" value="0.25" />
+        <entry key="..\:/Users/inuri/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_edit_profile.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/inuri/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_main.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/inuri/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_salon_edit_service.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/inuri/AndroidStudioProjects/Salon_Appointment_System/app/src/main/res/layout/activity_salon_profile.xml" value="0.16927083333333334" />
+        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_customer_login.xml" value="0.4466666666666667" />
+        <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_homepage.xml" value="0.3333333333333333" />
         <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Y2S2/MAD/SalonAppointmentSystem/app/src/main/res/layout/customer_login.xml" value="0.3333333333333333" />
-
-
       </map>
     </option>
   </component>
