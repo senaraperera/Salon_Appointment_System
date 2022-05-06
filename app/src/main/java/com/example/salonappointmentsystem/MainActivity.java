@@ -10,10 +10,7 @@ import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText cuName, cuEmail, cuPhone, cuPassword;
-    Button regButton;
-    Customer cusObj;
-    DatabaseReference dbReg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        
 
-        //rocky
-        //something MORE
     }
+
+
 }
 
