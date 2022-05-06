@@ -25,6 +25,10 @@
         <activity
             android:name=".customer_appointments"
             android:exported="true" />
+
+        <activity
+            android:name=".customerRegistration"
+            android:exported="true" />
         <activity
             android:name=".homepage"
             android:exported="true">
