@@ -76,8 +76,17 @@
             android:name=".salonProfile"
             android:exported="true"/>
 
+        <activity
+            android:name=".editProfile"
+            android:exported="true"/>
 
+        <activity
+            android:name=".changePassword"
+            android:exported="true"/>
 
+        <activity
+            android:name=".updatedPassword"
+            android:exported="true"/>
 
     </application>
 
