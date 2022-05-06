@@ -18,11 +18,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="checkoutTab">CHECKOUT</string>
-    <string name="appointmentTab">APPOINTMENT</string>
-    <string name="salonName">Salon Name</string>
-    <string name="category_Select">SELECT CATEGORY</string>
-    <string name="select_Style">SELECT STYLE</string>
+
+
+
+
+
     <string-array name="categories">
         <item>Hair Style</item>
         <item>Nail Art</item>
@@ -30,33 +30,18 @@
         <item>Massages</item>
         <item>Saree Draping</item>
     </string-array>
-    <string name="title_activity_customer_appointments">customer_appointments</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
-    <string name="f_salonName">Enter Name of Salon</string>
-    <string name="f_description">description</string>
-    <string name="f_location">location</string>
-    <string name="f_slocation">Enter location</string>
-    <string name="f_button">Upload Image of Salon</string>
-    <string name="f_date">Add Available day</string>
-    <string name="f_time">Add Available Time</string>
-    <string name="f_add">Add</string>
-    <string name="f_save">Save</string>
-    <string name="f_cancel">Cancel</string>
-    <string name="c_newPW">New Password</string>
-    <string name="c_confirmPW">Confirm Password</string>
-    <string name="btn_update">UPDATE</string>
-    <string name="btn_login">Login</string>
-    <string name="btn_edit">Edit Profile</string>
-    <string name="btn_pw">Change Password</string>
-    <string name="btn_save" />
-    <string name="BTN_Delete">DELETE</string>
+    <string name="hairdo_logo">HairDo Logo</string>
+    <string name="salonAppointment">+ APPOINTMENT</string>
+    <string name="salonServices">SERVICES</string>
+    <string name="salondes">DESCRIPTION</string>
+    <string name="salonDescription">DESCRIPTION</string>
+    <string name="salonLocation">LOCATION</string>
+
+    <string name="serviceDescription">DESCRIPTION</string>
+
+
+
+
 </resources>

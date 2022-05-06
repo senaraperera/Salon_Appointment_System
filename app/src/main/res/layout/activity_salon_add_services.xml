@@ -11,54 +11,55 @@
         android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/addName"
+        android:hint="Service Name"
+
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/addPrice"
+        android:hint="Service Price"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
 
     <EditText
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/serviceDuration"
+        android:hint="Duration"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="144dp"
-        android:text="@string/addService"
+        android:text="ADD SERVICE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"

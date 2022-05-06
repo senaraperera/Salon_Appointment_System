@@ -7,7 +7,7 @@
     tools:context=".customerRegistration">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/regName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -23,64 +23,64 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/regEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regEmail"
+        android:hint="email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/regName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/regPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regPhone"
+        android:hint="phone"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/regPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regPass"
+        android:hint="password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/regPhone" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/regConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:hint="@string/regConPass"
+        android:hint="confirm Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/regPassword" />
 
     <View
         android:id="@+id/view"
@@ -104,24 +104,29 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/regRegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
+        android:onClick="CreateData"
         android:text="REGISTER "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/regConfirmPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="108dp"
         android:text="Already Registered? Sign in"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/regConfirmPassword"
+        app:layout_constraintVertical_bias="0.008" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
