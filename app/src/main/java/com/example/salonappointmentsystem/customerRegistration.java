@@ -1,5 +1,6 @@
 package com.example.salonappointmentsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,10 +9,17 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 public class customerRegistration extends AppCompatActivity {
 
@@ -20,6 +28,8 @@ public class customerRegistration extends AppCompatActivity {
     Button registerCusButton;
     Customer cusObj;
     DatabaseReference dbReg;
+
+    FirebaseAuth cusAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +45,18 @@ public class customerRegistration extends AppCompatActivity {
         registerCusButton = findViewById(R.id.regRegisterButton);
         cusObj = new Customer();
 
+        cusAuth = FirebaseAuth.getInstance();
+
+        TextView loginNav = findViewById(R.id.regSignInButton);
+        loginNav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(customerRegistration.this, customer_login.class));
+            }
+        });
     }
+
 
     public void ClearControls(){
         cusName.setText("");
@@ -58,35 +79,29 @@ public class customerRegistration extends AppCompatActivity {
             }else if(TextUtils.isEmpty(cusPassword.getText().toString())){
                 Toast.makeText(getApplicationContext(), "Please enter your Password", Toast.LENGTH_SHORT).show();
             }else{
-                cusObj.setName(cusName.getText().toString().trim());
-                cusObj.setEmail(cusEmail.getText().toString().trim());
-                cusObj.setPhone(Integer.parseInt(cusPhone.getText().toString().trim()));
-                cusObj.setPassword(cusPassword.getText().toString().trim());
+                String email = cusEmail.getText().toString().trim();
+                String password = cusPassword.getText().toString().trim();
 
-                dbReg.push().setValue(cusObj);
-
-                Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
-                ClearControls();
-                //This is to send to the login page
-                startActivity(new Intent(getApplicationContext(), customer_login.class));
+                cusAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            cusObj.setName(cusName.getText().toString().trim());
+                            cusObj.setPhone(Integer.parseInt(cusPhone.getText().toString().trim()));
+                            dbReg.child(cusAuth.getUid()).setValue(cusObj);
+                            Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
+                            ClearControls();
+                            startActivity(new Intent(customerRegistration.this, customer_login.class));
+                        }else {
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         }catch (NumberFormatException e){
             Toast.makeText(getApplicationContext(), "invalid Number format", Toast.LENGTH_SHORT).show();
-        }
+        };
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
