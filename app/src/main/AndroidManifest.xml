@@ -26,29 +26,22 @@
             android:name=".appointment_success"
             android:exported="false" />
         <activity
-            android:name=".checkout2"
-            android:exported="false" />
-        <activity
             android:name=".customer_appointments"
             android:exported="false" />
         <activity
             android:name=".customerRegistration"
             android:exported="true" />
         <activity
-            android:name=".homepage"
-            android:exported="true">
+            android:name=".customer_edit_profile"
+            android:exported="true" />
+        <activity
+            android:name=".customer_login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".customer_edit_profile"
-            android:exported="false" />
-        <activity
-            android:name=".customer_login"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
