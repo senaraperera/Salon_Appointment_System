@@ -38,15 +38,11 @@ import java.util.UUID;
 
 public class salon_add_services extends AppCompatActivity {
 
-
-
-
-
-
     EditText servName,servPrice,servDuration;
     Button btn_addServ;
     DatabaseReference dbRef;
     servicesTable services;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +54,7 @@ public class salon_add_services extends AppCompatActivity {
         btn_addServ = findViewById(R.id.buttonAddServ);
 
         services = new servicesTable();
+
 
 
 
@@ -79,7 +76,7 @@ public class salon_add_services extends AppCompatActivity {
 
         try {
             if(TextUtils.isEmpty(servName.getText().toString()))
-                Toast.makeText(getApplicationContext(),"Please Enter Name",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Please Enter Name",Toast.LENGTH_SHORT).show();
             else if(TextUtils.isEmpty(servPrice.getText().toString()))
                 Toast.makeText(getApplicationContext(),"Please Enter Price",Toast.LENGTH_SHORT).show();
             else if(TextUtils.isEmpty(servDuration.getText().toString()))
@@ -87,12 +84,16 @@ public class salon_add_services extends AppCompatActivity {
             else {
                 services.setService_ID();
                 services.setServiceName(servName.getText().toString().trim());
-                services.setServicePrice(Integer.parseInt(servPrice.getText().toString().trim()));
-                services.setDuration(Integer.parseInt(servDuration.getText().toString().trim()));
+                services.setServicePrice(servPrice.getText().toString().trim());
+                services.setDuration(servDuration.getText().toString().trim());
+
 
 
                 //insert to the database
-                dbRef.child("services").setValue(services);
+               dbRef.push().setValue(services);
+
+
+
                 Toast.makeText(getApplicationContext(),"Data Inserted Successfully",Toast.LENGTH_SHORT).show();
 
 

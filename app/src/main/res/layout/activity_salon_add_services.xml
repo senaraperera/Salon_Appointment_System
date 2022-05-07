@@ -10,36 +10,20 @@
 
 
     <EditText
-        android:id="@+id/servName"
+        android:id="@+id/servPrice"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="36dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Service Name"
-
-        android:inputType="textPersonName"
+        android:hint="Service Price"
+        android:inputType="number"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/servDuration"
-        android:layout_width="312dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Duration"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/servName" />
 
     <Button
         android:id="@+id/buttonAddServ"
@@ -48,27 +32,43 @@
         android:layout_marginBottom="144dp"
         android:onClick="addServices"
         android:text="ADD SERVICE"
+        android:textColor="#5D4037"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/servDuration"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <EditText
-        android:id="@+id/servPrice"
+        android:id="@+id/servDuration"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="56dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Service Price"
+        android:hint="Duration (minutes)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servPrice" />
+
+    <EditText
+        android:id="@+id/servName"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Service Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servName" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

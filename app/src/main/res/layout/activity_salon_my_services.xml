@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".salonMyServices"
+    android:scrollingCache="false">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="652dp"
+
+        android:paddingBottom="10dp"
+        android:scrollingCache="false" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addService"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycleView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="327dp"
+        android:layout_marginTop="-102dp"
+        android:layout_marginEnd="26dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        app:backgroundTint="#00BCD4"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+</RelativeLayout>

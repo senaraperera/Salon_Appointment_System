@@ -3,13 +3,20 @@ package com.example.salonappointmentsystem;
 import java.util.UUID;
 
 public class servicesTable {
-    String service_ID;
+
     private String serviceName;
-    private int servicePrice;
-    private int duration;
+    private String servicePrice;
+    private String duration;
+    String service_ID;
+    String unique;
 
+    public String getUnique() {
+        return unique;
+    }
 
-
+    public void setUnique(String unique) {
+        this.unique = unique;
+    }
 
     public servicesTable() { }
 
@@ -27,19 +34,19 @@ public class servicesTable {
         this.serviceName = serviceName;
     }
 
-    public int getServicePrice() {
+    public String getServicePrice() {
         return servicePrice;
     }
 
-    public void setServicePrice(int servicePrice) {
+    public void setServicePrice(String servicePrice) {
         this.servicePrice = servicePrice;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 

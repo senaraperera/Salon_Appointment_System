@@ -20,9 +20,6 @@
     <string name="login_failed">"Login failed"</string>
 
 
-
-
-
     <string-array name="categories">
         <item>Hair Style</item>
         <item>Nail Art</item>
@@ -40,8 +37,6 @@
     <string name="salonLocation">LOCATION</string>
 
     <string name="serviceDescription">DESCRIPTION</string>
-
-
 
 
 </resources>
