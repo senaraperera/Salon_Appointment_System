@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".show_saloon_list">
+    tools:context=".show_saloon_list"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/pickSalon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="#8CBBF1"
+        android:gravity="center_horizontal"
+        android:text="Pick A Salon"
+        android:textColor="@color/white"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/saName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pickSalon"
+        android:hint="Salon Name"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/saAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saName"
+        android:hint="Salon Address"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/saContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saAddress"
+        android:layout_marginTop="5dp"
+        android:hint="Salon Contact"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/saOpenHrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saContact"
+        android:layout_marginTop="5dp"
+        android:hint="Salon Open Hrs"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -10,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
+
+        <activity android:name=".final_checkout"
+            android:exported="true"/>
         <activity
             android:name=".salonMyServices"
             android:exported="true" />
@@ -29,8 +32,17 @@
             android:name=".customer_appointments"
             android:exported="false" />
         <activity
+            android:name=".customerRegistration"
+            android:exported="true" />
+        <activity
             android:name=".homepage"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".customer_edit_profile"
             android:exported="false" />
@@ -39,21 +51,16 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- service activities -->
+            android:exported="true"/>
+    <!-- service activities -->
         <activity
             android:name=".salon_add_services"
             android:exported="true" />
         <activity
             android:name=".salonViewServices"
             android:exported="true" />
-
-        <activity android:name=".salon_view"
+        <activity
+            android:name=".salon_view"
             android:exported="true"/>
     </application>
 
