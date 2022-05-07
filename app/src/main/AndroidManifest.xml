@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.salonappointmentsystem">
 
     <application
@@ -10,11 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
-        <activity
-            android:name=".salonRegistrationNew"
-            android:exported="false"
-            android:label="@string/title_activity_salon_registration_new"
-            android:theme="@style/Theme.SalonAppointmentSystem.NoActionBar" />
+
         <activity
             android:name=".show_saloon_list"
             android:exported="true" />
@@ -50,7 +47,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity> <!-- service activities -->
+            android:exported="true" /> <!-- service activities -->
         <activity
             android:name=".salon_edit_service"
             android:exported="true" />
@@ -78,6 +75,11 @@
         <activity
             android:name=".updatedPassword"
             android:exported="true" />
+        <activity
+            android:name=".salonRegistrationNew"
+            android:exported="true"
+             />
     </application>
 
 </manifest>
+

@@ -36,9 +36,9 @@ public class salonRegistration extends AppCompatActivity {
 
         salOb = new salon();
 
-        Intent intent = new Intent(salonRegistration.this, salonRegistration_page2.class);
-        intent.putExtra("salon", salOb);
-        startActivity(intent);
+//        Intent intent = new Intent(salonRegistration.this, salonRegistration_page2.class);
+//        intent.putExtra("salon", salOb);
+//        startActivity(intent);
 
     }
         public void ClearControls(){
@@ -64,7 +64,7 @@ public class salonRegistration extends AppCompatActivity {
                     salOb.setPhone(Integer.parseInt(salPhone.getText().toString().trim()));
                     salOb.setPassword(salPassword.getText().toString().trim());
 
-                    //dbRef.push().setValue(salOb);
+                    dbRef.push().setValue(salOb);
 
                     Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                     ClearControls();

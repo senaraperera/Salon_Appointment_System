@@ -2,9 +2,9 @@ package com.example.salonappointmentsystem;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.time.LocalTime;
 
-public class salon implements Parcelable {
+
+public class salon  {
 
     private String nameOfOwner;
     private Integer phone;
@@ -16,36 +16,13 @@ public class salon implements Parcelable {
     private String description;
 
     private String day;
-    private LocalTime time;
+    private String time;
 
     public salon() {
     }
 
-    protected salon(Parcel in) {
-        nameOfOwner = in.readString();
-        if (in.readByte() == 0) {
-            phone = null;
-        } else {
-            phone = in.readInt();
-        }
-        password = in.readString();
-        nameOfSalon = in.readString();
-        location = in.readString();
-        description = in.readString();
-        day = in.readString();
-    }
 
-    public static final Creator<salon> CREATOR = new Creator<salon>() {
-        @Override
-        public salon createFromParcel(Parcel in) {
-            return new salon(in);
-        }
 
-        @Override
-        public salon[] newArray(int size) {
-            return new salon[size];
-        }
-    };
 
     public String getNameOfOwner() {
         return nameOfOwner;
@@ -103,32 +80,13 @@ public class salon implements Parcelable {
         this.day = day;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(nameOfOwner);
-        if (phone == null) {
-            parcel.writeByte((byte) 0);
-        } else {
-            parcel.writeByte((byte) 1);
-            parcel.writeInt(phone);
-        }
-        parcel.writeString(password);
-        parcel.writeString(nameOfSalon);
-        parcel.writeString(location);
-        parcel.writeString(description);
-        parcel.writeString(day);
-    }
 }
