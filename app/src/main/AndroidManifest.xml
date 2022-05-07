@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
+            android:name=".salonMyServices"
+            android:exported="true" />
+        <activity
             android:name=".show_saloon_list"
             android:exported="false" />
         <activity
@@ -42,22 +45,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--service activities-->
-        <activity
-            android:name=".salon_edit_service"
-            android:exported="true"/>
-
+        </activity> <!-- service activities -->
         <activity
             android:name=".salon_add_services"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".salonViewServices"
+            android:exported="true" />
+
+        <activity android:name=".salon_view"
             android:exported="true"/>
-
-
     </application>
 
 </manifest>

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".salon_edit_service">
+>
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/ID"
         android:layout_width="246dp"
         android:layout_height="48dp"
         android:layout_marginTop="316dp"
