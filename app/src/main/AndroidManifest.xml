@@ -11,66 +11,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
-            android:name=".show_saloon_list"
+            android:name=".salonMyServices"
             android:exported="true" />
+        <activity
+            android:name=".show_saloon_list"
+            android:exported="false" />
         <activity
             android:name=".appointment_failed"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".appointment_success"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".checkout2"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".customer_appointments"
-            android:exported="true" />
-
-        <activity
-            android:name=".customerRegistration"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".homepage"
+            android:exported="false" />
+        <activity
+            android:name=".customer_edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".customer_login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".customer_edit_profile"
-            android:exported="true" />
-        <activity
-            android:name=".customer_login"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-
-<!--service activities-->
-        <activity
-            android:name=".salon_edit_service"
-            android:exported="true"/>
-
+        </activity> <!-- service activities -->
         <activity
             android:name=".salon_add_services"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".salonViewServices"
+            android:exported="true" />
+
+        <activity android:name=".salon_view"
             android:exported="true"/>
-
-
     </application>
 
 </manifest>
