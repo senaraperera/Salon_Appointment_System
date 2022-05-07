@@ -4,20 +4,21 @@ public class Appointment {
     private String appID;
     private String salonID;
     private String serviceID;
+    private String cusID;
     private String AppDate;
-    private double amount;
+    private String amount;
 
     public Appointment() {
     }
 
-    public Appointment(String appID, String salonID, String serviceID, String appDate, double amount) {
+    public Appointment(String appID, String salonID, String serviceID, String cusID, String appDate, String amount) {
         this.appID = appID;
         this.salonID = salonID;
         this.serviceID = serviceID;
+        this.cusID = cusID;
         AppDate = appDate;
         this.amount = amount;
     }
-
 
     public String getAppID() {
         return appID;
@@ -43,6 +44,14 @@ public class Appointment {
         this.serviceID = serviceID;
     }
 
+    public String getCusID() {
+        return cusID;
+    }
+
+    public void setCusID(String cusID) {
+        this.cusID = cusID;
+    }
+
     public String getAppDate() {
         return AppDate;
     }
@@ -51,11 +60,11 @@ public class Appointment {
         AppDate = appDate;
     }
 
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 }
