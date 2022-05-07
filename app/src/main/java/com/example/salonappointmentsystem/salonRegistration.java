@@ -16,8 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class salonRegistration extends AppCompatActivity {
 
-    //Register Salon section
-    EditText salName, salPhone, salPassword, salConfirmPassword;
+    //Register owner details
+    EditText salOName, salPhone, salPassword, salConfirmPassword;
     Button btn_next;
     salon salOb;
     DatabaseReference dbRef;
@@ -28,16 +28,21 @@ public class salonRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salon_registration);
 
-        salName = findViewById(R.id.editTextTextPersonName5);
+        salOName = findViewById(R.id.editTextTextPersonName5);
         salPhone = findViewById(R.id.editTextTextPersonName6);
         salPassword = findViewById(R.id.editTextTextPersonName7);
         salConfirmPassword = findViewById(R.id.editTextTextPersonName8);
         btn_next = findViewById(R.id.button4);
 
         salOb = new salon();
+
+        Intent intent = new Intent(salonRegistration.this, salonRegistration_page2.class);
+        intent.putExtra("salon", salOb);
+        startActivity(intent);
+
     }
         public void ClearControls(){
-            salName.setText(" ");
+            salOName.setText(" ");
             salPhone.setText(" ");
             salPassword.setText(" ");
             salConfirmPassword.setText("");
@@ -48,18 +53,18 @@ public class salonRegistration extends AppCompatActivity {
             dbRef = FirebaseDatabase.getInstance().getReference().child("Salon");
 
             try{
-                if(TextUtils.isEmpty(salName.getText().toString())){
+                if(TextUtils.isEmpty(salOName.getText().toString())){
                     Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
                 }else if(TextUtils.isEmpty(salPhone.getText().toString())){
                     Toast.makeText(getApplicationContext(), "Please enter your Phone", Toast.LENGTH_SHORT).show();
                 }else if(TextUtils.isEmpty(salPassword.getText().toString())){
                     Toast.makeText(getApplicationContext(), "Please enter your Password", Toast.LENGTH_SHORT).show();
                 }else{
-                    salOb.setNameOfOwner(salName.getText().toString().trim());
+                    salOb.setNameOfOwner(salOName.getText().toString().trim());
                     salOb.setPhone(Integer.parseInt(salPhone.getText().toString().trim()));
                     salOb.setPassword(salPassword.getText().toString().trim());
 
-                    dbRef.push().setValue(salOb);
+                    //dbRef.push().setValue(salOb);
 
                     Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                     ClearControls();
