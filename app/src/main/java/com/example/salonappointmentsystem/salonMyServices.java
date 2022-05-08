@@ -2,6 +2,7 @@ package com.example.salonappointmentsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +28,14 @@ public class salonMyServices extends AppCompatActivity {
       ArrayList<servicesTable> list;
       DatabaseReference databaseReference;
       MyAdapter adapter;
+      servicesTable services;
+      String id = "1ad46e2f-7b7c-4220-b42d-0b5e8e434a40";
+      FloatingActionButton floatingActionButton;
+       CardView cardview ;
+
+
+
+
 
 
 
@@ -37,12 +47,27 @@ public class salonMyServices extends AppCompatActivity {
         setContentView(R.layout.activity_salon_my_services);
 
           recyclerView = findViewById(R.id.recycleView);
-          databaseReference = FirebaseDatabase.getInstance().getReference("Services");
+          databaseReference = FirebaseDatabase.getInstance().getReference("Services").child("salon");
           list = new ArrayList<>();
           recyclerView.setLayoutManager(new LinearLayoutManager(this));
           adapter= new MyAdapter(this,list);
           recyclerView.setAdapter(adapter);
 
+
+           floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+
+          floatingActionButton.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                  startActivity(new Intent(getApplicationContext(),salon_add_services.class));
+
+
+
+              }
+
+
+
+          });
 
 
 

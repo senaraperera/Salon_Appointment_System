@@ -8,6 +8,10 @@
     android:layout_marginTop="15dp"
     android:foreground="?android:attr/selectableItemBackground"
     android:scrollingCache="false"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/card"
+
     >
 
 
@@ -26,6 +30,11 @@
             android:visibility="gone"
             />
 
+        <ImageView
+            android:id="@+id/servicesView"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,7 +103,6 @@
 
         </LinearLayout>
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
