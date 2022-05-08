@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class salonRegistrationNew extends AppCompatActivity {
+public class salonRegistrationFinal extends AppCompatActivity {
 
 
 
@@ -119,7 +119,7 @@ public class salonRegistrationNew extends AppCompatActivity {
 
                             Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                             ClearControls();
-                            startActivity(new Intent(salonRegistrationNew.this, salonLogin.class));
+                            startActivity(new Intent(salonRegistrationFinal.this, salonLogin.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                         }
@@ -135,8 +135,8 @@ public class salonRegistrationNew extends AppCompatActivity {
 
 
 
-                //This is to send to the login page
-                //startActivity(new Intent(getApplicationContext(), customer_login.class));
+            //This is to send to the login page
+            //startActivity(new Intent(getApplicationContext(), customer_login.class));
 
         }catch (NumberFormatException e){
             Toast.makeText(getApplicationContext(), "invalid Number format", Toast.LENGTH_SHORT).show();
