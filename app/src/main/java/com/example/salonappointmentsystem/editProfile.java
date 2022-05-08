@@ -24,6 +24,7 @@ public class editProfile extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), salonProfile.class));
         Toast.makeText(getApplicationContext(), "Services", Toast.LENGTH_SHORT).show();
     }
+
     DatabaseReference dbRef;
     salon salOb ;
     FirebaseAuth salAuth;
