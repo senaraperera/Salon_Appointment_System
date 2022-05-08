@@ -72,7 +72,7 @@ public class customerProfilePage extends AppCompatActivity {
     }
 
     public void deleteProfile(View view){
-        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
+        startActivity(new Intent(getApplicationContext(), customerDeleteProfile.class));
         Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
     }
 

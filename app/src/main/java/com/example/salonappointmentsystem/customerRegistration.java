@@ -27,7 +27,6 @@ public class customerRegistration extends AppCompatActivity {
     Button registerCusButton;
     Customer cusObj;
     DatabaseReference dbReg;
-
     FirebaseAuth cusAuth;
 
     @Override
