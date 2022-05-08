@@ -12,7 +12,8 @@
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
             android:name=".salonMyServices"
-            android:exported="true" />
+            android:exported="true"
+            />
         <activity
             android:name=".show_saloon_list"
             android:exported="false" />
@@ -48,13 +49,18 @@
         </activity> <!-- service activities -->
         <activity
             android:name=".salon_add_services"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".salonMyServices"/>
         <activity
             android:name=".salonViewServices"
             android:exported="true" />
+        <activity
+            android:name=".salon_view"
+            android:exported="true" />
 
-        <activity android:name=".salon_view"
-            android:exported="true"/>
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

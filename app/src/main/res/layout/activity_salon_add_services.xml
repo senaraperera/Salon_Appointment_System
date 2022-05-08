@@ -6,14 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".salon_add_services"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-131dp">
+    tools:layout_editor_absoluteY="13dp">
 
+
+    <ImageView
+        android:id="@+id/serviceView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        tools:src="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/servPrice"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Service Price"
@@ -44,7 +56,7 @@
         android:id="@+id/servDuration"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Duration (minutes)"
@@ -59,7 +71,7 @@
         android:id="@+id/servName"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="212dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Service Name"
