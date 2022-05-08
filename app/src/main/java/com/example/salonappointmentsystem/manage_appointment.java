@@ -25,6 +25,7 @@ public class manage_appointment extends AppCompatActivity {
     TextView price, style;
     EditText date;
     DatabaseReference readDB;
+    DatabaseReference db;
     FirebaseAuth cusAuth;
     String ID;
     Appointment app;
@@ -44,12 +45,17 @@ public class manage_appointment extends AppCompatActivity {
         style = findViewById(R.id.appData1);
         date = findViewById(R.id.editTextDate);
 
+        db = FirebaseDatabase.getInstance().getReference().child("Appointment").child(ID);
+        // app = Appointment;
+//        db.child("Appointment").child(ID);
+
         readDB = FirebaseDatabase.getInstance().getReference("Appointment").child(ID);
 
         readDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.hasChildren()){
+                    app = snapshot.getValue(Appointment.class);
                     price.setText(snapshot.child("amount").getValue().toString());
                     style.setText(snapshot.child("serviceID").getValue().toString());
                     date.setText(snapshot.child("appDate").getValue().toString());
@@ -67,16 +73,20 @@ public class manage_appointment extends AppCompatActivity {
     public void update(View view){
         Toast.makeText(getApplicationContext(), ID,Toast.LENGTH_SHORT).show();
         app.setAppDate(date.getText().toString().trim());
-        readDB.child("Appointment").child(ID).setValue(app).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-
-                if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(), "Date updated",Toast.LENGTH_SHORT).show();
-                }else{
-                    task.getException().printStackTrace();
-                }
-            }
-        });
+//        app.setAppDate("test");
+//        db.child("Appointment").child(ID).setValue(app);
+//        db.child("Appointment").child(ID).setValue(app);
+        db.setValue(app);
+//        .addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//
+//                if(task.isSuccessful()){
+//                    Toast.makeText(getApplicationContext(), "Date updated",Toast.LENGTH_SHORT).show();
+//                }else{
+//                    task.getException().printStackTrace();
+//                }
+//            }
+//        });
     }
 }
