@@ -1,7 +1,9 @@
 package com.example.salonappointmentsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -9,15 +11,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class salonRegistrationNew extends AppCompatActivity {
 
-    EditText salOName, salPhone, salPassword, salConfirmPassword,salName, salLocation, salDescription, sDay, sTime;
+    EditText salOName, salPhone,salEmail, salPassword, salConfirmPassword,salName, salLocation, salDescription, sDay, sTime;
     Button btn_submit;
     salon salOb;
     DatabaseReference dbRef;
+    FirebaseAuth salAuth;
 
 
     @Override
@@ -25,10 +32,12 @@ public class salonRegistrationNew extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salon_registration_new);
 
-        salOName = findViewById(R.id.editTextTextPersonName11);
-        salPhone = findViewById(R.id.editTextTextPersonName14);
+        salEmail = findViewById(R.id.editTextTextPersonName23);
         salPassword = findViewById(R.id.editTextTextPersonName15);
         salConfirmPassword = findViewById(R.id.editTextTextPersonName19);
+
+        salOName = findViewById(R.id.editTextTextPersonName11);
+        salPhone = findViewById(R.id.editTextTextPersonName14);
 
         salName = findViewById(R.id.editTextTextPersonName20);
         salLocation = findViewById(R.id.editTextTextPersonName21);
@@ -39,6 +48,7 @@ public class salonRegistrationNew extends AppCompatActivity {
         btn_submit = findViewById(R.id.button20);
 
         salOb = new salon();
+        salAuth = FirebaseAuth.getInstance();
 
     }
     public void ClearControls(){
@@ -76,24 +86,50 @@ public class salonRegistrationNew extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please enter available Day/s", Toast.LENGTH_SHORT).show();}
             else if(TextUtils.isEmpty(sTime.getText().toString())){
                 Toast.makeText(getApplicationContext(), "Please enter available time/s", Toast.LENGTH_SHORT).show();}
-            else{
-                salOb.setNameOfOwner(salOName.getText().toString().trim());
-                salOb.setPhone(Integer.parseInt(salPhone.getText().toString().trim()));
-                salOb.setPassword(salPassword.getText().toString().trim());
-                salOb.setNameOfSalon(salName.getText().toString().trim());
-                salOb.setLocation(salLocation.getText().toString().trim());
-                salOb.setDescription(salDescription.getText().toString().trim());
-                salOb.setDay(sDay.getText().toString().trim());
-                salOb.setTime(sTime.getText().toString().trim());
+            else {
+
+                String email = salEmail.getText().toString().trim();
+//                String email ="inuri@gmail.com";
+//                String password ="12335678";
+                String password = salPassword.getText().toString().trim();
+
+                salAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            salOb.setNameOfOwner(salOName.getText().toString().trim());
+                            salOb.setPhone(Integer.parseInt(salPhone.getText().toString().trim()));
+                            salOb.setNameOfSalon(salName.getText().toString().trim());
+                            salOb.setLocation(salLocation.getText().toString().trim());
+                            salOb.setDescription(salDescription.getText().toString().trim());
+                            salOb.setDay(sDay.getText().toString().trim());
+                            salOb.setTime(sTime.getText().toString().trim());
 
 
-                dbRef.push().setValue(salOb);
+                            dbRef.child(salAuth.getUid()).setValue(salOb);
 
-                Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
-                ClearControls();
+
+                            Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
+                            ClearControls();
+                            startActivity(new Intent(salonRegistrationNew.this, customer_login.class));
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+
+                });
+            }
+
+
+
+
+
+
+
                 //This is to send to the login page
                 //startActivity(new Intent(getApplicationContext(), customer_login.class));
-            }
+
         }catch (NumberFormatException e){
             Toast.makeText(getApplicationContext(), "invalid Number format", Toast.LENGTH_SHORT).show();
         }
