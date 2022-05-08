@@ -19,7 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.029"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@android:drawable/ic_menu_report_image"
+        tools:srcCompat="@android:drawable/ic_menu_report_image" />
+
 
     <EditText
         android:id="@+id/servPrice"
@@ -28,7 +30,8 @@
         android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Service Price"
+        android:background="@drawable/rounded"
+        android:hint="  Service Price"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColorHint="#757575"
@@ -44,7 +47,7 @@
         android:layout_marginBottom="144dp"
         android:onClick="addServices"
         android:text="ADD SERVICE"
-        android:textColor="#5D4037"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.985"
@@ -56,10 +59,12 @@
         android:id="@+id/servDuration"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+
+        android:layout_marginTop="40dp"
         android:autofillHints=""
+        android:background="@drawable/rounded"
         android:ems="10"
-        android:hint="Duration (minutes)"
+        android:hint="  Duration (minutes)"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +79,8 @@
         android:layout_marginTop="212dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Service Name"
+        android:background="@drawable/rounded"
+        android:hint="  Service Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
