@@ -190,6 +190,7 @@
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:layout_marginTop="372dp"
+        android:onClick="myServices"
         android:text="My Services"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
