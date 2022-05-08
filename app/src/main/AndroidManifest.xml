@@ -90,7 +90,6 @@
         <activity
             android:name=".salonRegistrationNew"
             android:exported="true" />
-
         <activity android:name=".manage_appointment"
             android:exported="true"/>
 
