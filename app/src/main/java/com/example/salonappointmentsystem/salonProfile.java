@@ -31,6 +31,10 @@ public class salonProfile extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), editProfile.class));
         Toast.makeText(getApplicationContext(), "Edit Data!", Toast.LENGTH_SHORT).show();
     }
+    public void myServices(View view){
+        startActivity(new Intent(getApplicationContext(), salonMyServices.class));
+        Toast.makeText(getApplicationContext(), "Edit Data!", Toast.LENGTH_SHORT).show();
+    }
 
     public void ClearControls(){
         salOName.setText(" ");
