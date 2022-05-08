@@ -6,10 +6,6 @@
     app:cardElevation="12dp"
     app:cardCornerRadius="12dp"
     android:layout_marginTop="15dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:scrollingCache="false"
-    android:clickable="true"
-    android:focusable="true"
     android:id="@+id/card"
 
     >
