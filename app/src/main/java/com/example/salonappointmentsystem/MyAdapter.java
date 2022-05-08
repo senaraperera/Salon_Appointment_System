@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
@@ -36,6 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
    String imageuri;
     Context context;
     ArrayList<servicesTable> list;
+    FirebaseAuth salonID;
 
     public MyAdapter(Context context, ArrayList<servicesTable> list) {
         this.context = context;
@@ -47,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.services,parent,false);
-
+         salonID = FirebaseAuth.getInstance();
 
         return new MyViewHolder(v);
     }
@@ -105,7 +107,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
 
-                           FirebaseDatabase.getInstance().getReference().child("Services").child("salon").child(services.getUnique()).updateChildren(map)
+                           FirebaseDatabase.getInstance().getReference().child("Services").child(salonID.getUid()).child(services.getUnique()).updateChildren(map)
                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                @Override
                                public void onSuccess(Void unused) {
@@ -145,7 +147,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         list.clear();
-                        FirebaseDatabase.getInstance().getReference().child("Services").child("salon").child(services.getUnique()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("Services").child(salonID.getUid()).child(services.getUnique()).removeValue();
 
                     }
                 });
