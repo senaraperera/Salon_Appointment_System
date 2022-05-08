@@ -38,8 +38,8 @@ public class customerProfilePage extends AppCompatActivity {
         db = FirebaseDatabase.getInstance().getReference();
         cusAuth = FirebaseAuth.getInstance();
         db.child("Customer")
-//                .child(cusAuth.getUid())
-                .child("RXz0hKvMKeOajxqKCJMBLeD3Sqv1")
+                .child(cusAuth.getUid())
+//                .child("dUvI60zMNkfNI397AIyMB7lyc9D2")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
