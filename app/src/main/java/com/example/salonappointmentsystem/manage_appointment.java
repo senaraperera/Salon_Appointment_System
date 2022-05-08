@@ -78,7 +78,7 @@ public class manage_appointment extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.hasChildren()){
                     db.removeValue();
-                    startActivity(new Intent(getApplicationContext(), customer_login.class));
+                    startActivity(new Intent(getApplicationContext(), customerProfilePage.class));
                     Toast.makeText(getApplicationContext(), "Appointment deleted successfully",
                             Toast.LENGTH_SHORT).show();
                 }else{
