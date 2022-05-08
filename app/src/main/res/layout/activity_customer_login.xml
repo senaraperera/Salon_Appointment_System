@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/salonLoginPassword" />
 
     <TextView
-        android:id="@+id/loginCustomer"
+        android:id="@+id/cusLogin"
         android:layout_width="94dp"
         android:layout_height="17dp"
         android:layout_marginTop="16dp"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginCustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/cusLogin" />
 
     <ImageView
         android:id="@+id/logoImage"
