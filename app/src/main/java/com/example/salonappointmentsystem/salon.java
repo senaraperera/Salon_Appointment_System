@@ -9,7 +9,10 @@ public class salon  {
     private String nameOfOwner;
     private Integer phone;
     private String password;
-    private String id;
+
+    private String email;
+
+
 
     private String nameOfSalon;
     private String location;
@@ -43,6 +46,14 @@ public class salon  {
 
     public void setPhone(Integer phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
