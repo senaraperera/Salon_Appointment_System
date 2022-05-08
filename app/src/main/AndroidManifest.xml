@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
+            android:name=".viewAppointments"
+            android:exported="true" />
+        <activity
             android:name=".manage_appointment"
             android:exported="true" />
         <activity
@@ -52,13 +55,12 @@
             android:exported="true" /> <!-- service activities -->
         <activity
             android:name=".salon_add_services"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".salonMyServices" />
         <activity
             android:name=".salonViewServices"
             android:exported="true" /> <!-- -salon activities -->
-        <activity
-            android:name=".salonRegistration"
-            android:exported="true" />
+
         <activity
             android:name=".salonRegistration_page2"
             android:exported="true" />
