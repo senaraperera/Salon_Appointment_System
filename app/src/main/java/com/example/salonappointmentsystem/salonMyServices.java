@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,9 +30,9 @@ public class salonMyServices extends AppCompatActivity {
       DatabaseReference databaseReference;
       MyAdapter adapter;
       servicesTable services;
-      String id = "1ad46e2f-7b7c-4220-b42d-0b5e8e434a40";
       FloatingActionButton floatingActionButton;
        CardView cardview ;
+       FirebaseAuth salID;
 
 
 
@@ -45,9 +46,10 @@ public class salonMyServices extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salon_my_services);
+        salID = FirebaseAuth.getInstance();
 
           recyclerView = findViewById(R.id.recycleView);
-          databaseReference = FirebaseDatabase.getInstance().getReference("Services").child("salon");
+          databaseReference = FirebaseDatabase.getInstance().getReference("Services").child(salID.getUid());
           list = new ArrayList<>();
           recyclerView.setLayoutManager(new LinearLayoutManager(this));
           adapter= new MyAdapter(this,list);

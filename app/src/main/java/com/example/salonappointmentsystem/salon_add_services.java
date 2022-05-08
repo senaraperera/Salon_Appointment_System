@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,6 +53,7 @@ public class salon_add_services extends AppCompatActivity {
     ActivityResultLauncher<String> mGetContent;
     Uri imageID;
     String imageUri;
+    FirebaseAuth salID;
 
     private FirebaseStorage storage;
     private StorageReference storageReference;
@@ -66,10 +68,12 @@ public class salon_add_services extends AppCompatActivity {
         btn_addServ = findViewById(R.id.buttonAddServ);
         serviceView = findViewById(R.id.serviceView);
 
+
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
         services = new servicesTable();
+        salID = FirebaseAuth.getInstance();
 
        mGetContent=registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
            @Override
@@ -153,7 +157,7 @@ public class salon_add_services extends AppCompatActivity {
 
 
                 //insert to the database
-               dbRef.child(ID).push().setValue(services);
+               dbRef.child(salID.getUid()).push().setValue(services);
 
 
 
