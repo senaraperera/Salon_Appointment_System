@@ -5,12 +5,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
+import com.squareup.picasso.Picasso;
 
 import java.sql.Ref;
 import java.util.ArrayList;
@@ -30,7 +33,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-
+   String imageuri;
     Context context;
     ArrayList<servicesTable> list;
 
@@ -49,6 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return new MyViewHolder(v);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
            servicesTable services = list.get(position);
@@ -56,6 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
            holder.servicePrice.setText(services.getServicePrice());
            holder.serviceDuration.setText(services.getDuration());
            holder.serviceID.setText(services.getService_ID());
+           Picasso.get().load(services.getImage()).into(holder.serviceView);
 
 
 
@@ -100,7 +105,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
 
-                           FirebaseDatabase.getInstance().getReference().child("Services").child(services.getUnique()).updateChildren(map)
+                           FirebaseDatabase.getInstance().getReference().child("Services").child("salon").child(services.getUnique()).updateChildren(map)
                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                @Override
                                public void onSuccess(Void unused) {
@@ -140,7 +145,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         list.clear();
-                        FirebaseDatabase.getInstance().getReference().child("Services").child(services.getUnique()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("Services").child("salon").child(services.getUnique()).removeValue();
 
                     }
                 });
@@ -166,6 +171,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView serviceName,servicePrice,serviceDuration,serviceID;
+        ImageView serviceView;
 
         Button btnEditService,btnDeleteService;
 
@@ -175,6 +181,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             servicePrice = itemView.findViewById(R.id.servicePrice);
             serviceDuration = itemView.findViewById(R.id.serviceDuration);
             serviceID = itemView.findViewById(R.id.serviceID);
+            serviceView = itemView.findViewById(R.id.servicesView);
+
+
 
             btnEditService = (Button)itemView.findViewById(R.id.btnEditService);
             btnDeleteService = (Button)itemView.findViewById(R.id.btnDeleteService);

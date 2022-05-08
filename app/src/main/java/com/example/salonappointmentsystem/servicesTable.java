@@ -1,5 +1,8 @@
 package com.example.salonappointmentsystem;
 
+import android.net.Uri;
+import android.widget.ImageView;
+
 import java.util.UUID;
 
 public class servicesTable {
@@ -7,6 +10,7 @@ public class servicesTable {
     private String serviceName;
     private String servicePrice;
     private String duration;
+    private String image;
     String service_ID;
     String unique;
 
@@ -21,7 +25,13 @@ public class servicesTable {
     public servicesTable() { }
 
 
+    public String getImage() {
+        return image;
+    }
 
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public void setService_ID(){
         this.service_ID= UUID.randomUUID().toString();
