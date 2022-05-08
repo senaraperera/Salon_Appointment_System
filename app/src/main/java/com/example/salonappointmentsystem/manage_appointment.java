@@ -3,6 +3,7 @@ package com.example.salonappointmentsystem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,9 +47,6 @@ public class manage_appointment extends AppCompatActivity {
         date = findViewById(R.id.editTextDate);
 
         db = FirebaseDatabase.getInstance().getReference().child("Appointment").child(ID);
-        // app = Appointment;
-//        db.child("Appointment").child(ID);
-
         readDB = FirebaseDatabase.getInstance().getReference("Appointment").child(ID);
 
         readDB.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -73,20 +71,27 @@ public class manage_appointment extends AppCompatActivity {
     public void update(View view){
         Toast.makeText(getApplicationContext(), ID,Toast.LENGTH_SHORT).show();
         app.setAppDate(date.getText().toString().trim());
-//        app.setAppDate("test");
-//        db.child("Appointment").child(ID).setValue(app);
-//        db.child("Appointment").child(ID).setValue(app);
         db.setValue(app);
-//        .addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//
-//                if(task.isSuccessful()){
-//                    Toast.makeText(getApplicationContext(), "Date updated",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    task.getException().printStackTrace();
-//                }
-//            }
-//        });
+    }
+
+    public void deleteApp(View view){
+        DatabaseReference delref = FirebaseDatabase.getInstance().getReference().child("Appointment");
+        delref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.hasChildren()){
+                    db.removeValue();
+                    startActivity(new Intent(getApplicationContext(), customer_login.class));
+                    Toast.makeText(getApplicationContext(), "Appointment deleted successfully", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }
