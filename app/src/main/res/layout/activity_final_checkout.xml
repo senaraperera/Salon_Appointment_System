@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroun"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".final_checkout">
+
+    <Button
+        android:id="@+id/checkoutBtn2"
+        android:layout_width="139dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:onClick="Checkout"
+        android:text="CHECKOUT"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningTxt2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/warningTxt2"
+        android:layout_width="342dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="*If you cancel your appointment within two days prior to the date reserved, a penalty will be imposed."
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningMsg3" />
+
+    <TextView
+        android:id="@+id/warningMsg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="WARNING"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateLabel" />
+
+    <TextView
+        android:id="@+id/chkServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Feather Cut"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkService" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Date"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkServiceName" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="1000"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chkServiceName"
+        app:layout_constraintStart_toEndOf="@+id/chkServiceName" />
+
+    <TextView
+        android:id="@+id/chkService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="SERVICE"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chksalonName" />
+
+    <TextView
+        android:id="@+id/chksalonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:text="SENI Cuts"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appointment"
+        tools:text="SENI Cuts" />
+
+    <TextView
+        android:id="@+id/appointment"
+        android:layout_width="417dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="#8CBBF1"
+        android:backgroundTint="@color/yellow"
+        android:gravity="center_horizontal"
+        android:text="Appointment"
+        android:textColor="@color/textColor"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="116dp"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="26/06/2022"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateLabel"
+        app:layout_constraintStart_toEndOf="@+id/dateLabel"
+        android:importantForAutofill="no" />
+</androidx.constraintlayout.widget.ConstraintLayout>
