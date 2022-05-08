@@ -22,7 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 public class salonProfile extends AppCompatActivity {
 
     TextView salOName, salPhone,  salName, salLocation, salDescription, sDay, sTime;
-    Button btn_edit;
     DatabaseReference dbRef;
     FirebaseAuth salAuth;
     FirebaseUser user;
@@ -33,7 +32,7 @@ public class salonProfile extends AppCompatActivity {
     }
     public void myServices(View view){
         startActivity(new Intent(getApplicationContext(), salonMyServices.class));
-        Toast.makeText(getApplicationContext(), "Edit Data!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Services", Toast.LENGTH_SHORT).show();
     }
 
     public void ClearControls(){
@@ -47,8 +46,7 @@ public class salonProfile extends AppCompatActivity {
     }
 
     public void deleteAcc(View view){
-        salAuth = FirebaseAuth.getInstance();
-        user = FirebaseAuth.getInstance().getCurrentUser();
+
 
         DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Salon");
         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -57,9 +55,9 @@ public class salonProfile extends AppCompatActivity {
                 if(dataSnapshot.hasChild(salAuth.getUid())){
                     dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child(salAuth.getUid());
                     dbRef.removeValue();
-                    ClearControls();
+//                    ClearControls();
 
-                    startActivity(new Intent(getApplicationContext(), customer_login.class));
+                    startActivity(new Intent(getApplicationContext(), salonLogin.class));
                     Toast.makeText(getApplicationContext(), "Data deleted Successfully", Toast.LENGTH_SHORT).show();
 
 
@@ -73,13 +71,20 @@ public class salonProfile extends AppCompatActivity {
 
             }
         });
+        user.delete();
+        Toast.makeText(getApplicationContext(), "Deleting user", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salon_profile);
+
+        salAuth = FirebaseAuth.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         salOName = findViewById(R.id.textView17);
         salPhone = findViewById(R.id.textView20);

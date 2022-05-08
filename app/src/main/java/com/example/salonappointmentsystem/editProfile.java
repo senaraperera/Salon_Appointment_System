@@ -116,6 +116,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class editProfile extends AppCompatActivity {
 
+    public void redirectToProfile(View view){
+        startActivity(new Intent(getApplicationContext(), salonProfile.class));
+        Toast.makeText(getApplicationContext(), "Services", Toast.LENGTH_SHORT).show();
+    }
+
     EditText salOName, salPhone,  salName, salLocation, salDescription, sDay, sTime;
     Button btn_edit;
     DatabaseReference dbRef;
