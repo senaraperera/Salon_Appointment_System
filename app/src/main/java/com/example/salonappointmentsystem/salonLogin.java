@@ -39,13 +39,23 @@ public class salonLogin extends AppCompatActivity {
         loginButton.setOnClickListener(view -> {
             loginUser();
         });
-
         TextView loginNav = findViewById(R.id.register);
         loginNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(salonLogin.this, salonRegistrationFinal.class));
+
+            }
+        });
+
+        TextView cusLogin = findViewById(R.id.cusLogin);
+        cusLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(salonLogin.this, customer_login.class));
+
             }
 
         });
@@ -84,8 +94,5 @@ public class salonLogin extends AppCompatActivity {
                 }
             });
         }
-
-
-
     }
 }

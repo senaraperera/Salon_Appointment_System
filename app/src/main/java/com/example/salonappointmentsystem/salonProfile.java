@@ -89,7 +89,6 @@ public class salonProfile extends AppCompatActivity {
         salOName = findViewById(R.id.textView17);
         salPhone = findViewById(R.id.textView20);
 
-
         salName = findViewById(R.id.textView16);
         salLocation = findViewById(R.id.textView19);
         salDescription = findViewById(R.id.textView18);
@@ -97,7 +96,6 @@ public class salonProfile extends AppCompatActivity {
         sTime = findViewById(R.id.textView2);
 
         salAuth = FirebaseAuth.getInstance();
-
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child(salAuth.getUid());
         dbRef.addListenerForSingleValueEvent(new ValueEventListener(){
@@ -116,10 +114,8 @@ public class salonProfile extends AppCompatActivity {
                 else
                     Toast.makeText(getApplicationContext(), "No Source To Display", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError){
-
             }
         });
 
