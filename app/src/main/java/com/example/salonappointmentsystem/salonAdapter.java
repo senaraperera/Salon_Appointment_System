@@ -6,10 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class salonAdapter extends RecyclerView.Adapter<salonAdapter.MyViewHolder> {
@@ -17,7 +15,6 @@ public class salonAdapter extends RecyclerView.Adapter<salonAdapter.MyViewHolder
     ArrayList<salon> list;
     public static final String EXTRA = "com.example.salonappointmentsystem.EXTRA_TEXT";
     public static final String EXTRAID = "com.example.salonappointmentsystem.EXTRA_id";
-
 
     public salonAdapter(Context context, ArrayList<salon> list) {
         this.context = context;
@@ -62,9 +59,7 @@ public class salonAdapter extends RecyclerView.Adapter<salonAdapter.MyViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //TextView txt = (TextView) findViewById(R.id.salName);
                     String text = name.getText().toString();
-
                     Intent intent = new Intent(view.getContext(), final_checkout.class);
                     intent.putExtra(EXTRA, text);
                     intent.putExtra(EXTRAID, getSalon().getId());
@@ -76,7 +71,6 @@ public class salonAdapter extends RecyclerView.Adapter<salonAdapter.MyViewHolder
         public com.example.salonappointmentsystem.salon getSalon() {
             return salon;
         }
-
         public void setSalon(com.example.salonappointmentsystem.salon salon) {
             this.salon = salon;
         }

@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class salonLogin extends AppCompatActivity {
 
+
     EditText loginEmail;
     EditText loginPassword;
     Button loginButton;
@@ -44,6 +45,7 @@ public class salonLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(salonLogin.this, salonRegistrationFinal.class));
+
             }
         });
 
@@ -53,7 +55,19 @@ public class salonLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(salonLogin.this, customer_login.class));
+
             }
+
+        });
+
+        TextView cusLogin = findViewById(R.id.cusLogin);
+        cusLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(salonLogin.this, customer_login.class));
+            }
+
         });
     }
 
