@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="deleteApp"
     tools:context=".manage_appointment">
 
     <Button
@@ -25,6 +26,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="28dp"
         android:backgroundTint="#FA5858"
+        android:onClick="deleteApp"
         android:text="@string/deleteApp"
         android:textColor="@color/design_default_color_surface"
         app:layout_constraintEnd_toEndOf="parent"
