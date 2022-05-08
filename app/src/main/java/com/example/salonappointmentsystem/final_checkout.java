@@ -63,6 +63,8 @@ public class final_checkout extends AppCompatActivity {
         price.setText("");
         salonId.setText("");
         serviceId.setText("");
+        Intent intent = new Intent( getApplicationContext(), customerProfilePage.class );
+        startActivity(intent);
     }
 
     public void Checkout(View view){
@@ -74,12 +76,11 @@ public class final_checkout extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please enter a date", Toast.LENGTH_SHORT).show();
             }else{
                 appObj.setAppDate(date.getText().toString().trim());
-                appObj.setCusID(cusAuth.getUid());
                 appObj.setSalonID(salId);
                 appObj.setServiceID(serviceId.getText().toString().trim());
                 appObj.setAmount(price.getText().toString().trim());
 
-                fireDB.push().setValue(appObj); //insert a appointment to db
+                fireDB.child(cusAuth.getUid()).setValue(appObj); //insert a appointment to db
 
                 Toast.makeText(getApplicationContext(), "Appointment created", Toast.LENGTH_SHORT).show();
                 clearControls();
