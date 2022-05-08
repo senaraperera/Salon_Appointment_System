@@ -23,16 +23,23 @@ public class customerProfilePage extends AppCompatActivity {
     FirebaseAuth cusAuth;
     DatabaseReference db;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_profile_page);
 
+//        if (cusAuth.getUid() == null){
+//            startActivity(new Intent(getApplicationContext(), customer_login.class));
+//        }
+
+
         db = FirebaseDatabase.getInstance().getReference();
         cusAuth = FirebaseAuth.getInstance();
         db.child("Customer")
 //                .child(cusAuth.getUid())
-                .child("TGTJ4DbGgpS8rISZI55a00cMAsE2")
+                .child("RXz0hKvMKeOajxqKCJMBLeD3Sqv1")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
@@ -61,7 +68,7 @@ public class customerProfilePage extends AppCompatActivity {
 
     public void editProfile(View view){
         startActivity(new Intent(getApplicationContext(), customerEditDetails.class));
-        Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Edit Data!", Toast.LENGTH_SHORT).show();
     }
 
     public void deleteProfile(View view){
@@ -70,12 +77,12 @@ public class customerProfilePage extends AppCompatActivity {
     }
 
     public void showAppointments(View view){
-        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
-        Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getApplicationContext(), manage_appointment.class));
+        Toast.makeText(getApplicationContext(), "Show Appointments!", Toast.LENGTH_SHORT).show();
     }
 
     public void showPens(View view){
-        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
+        startActivity(new Intent(getApplicationContext(), CustomerPenalty.class));
         Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
     }
 

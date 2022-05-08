@@ -97,10 +97,10 @@
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
         android:text="Delete Account"
-        android:textColor="#000000"
+        android:textColor="#B10000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -135,8 +135,8 @@
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
         android:text="Appointments"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -153,7 +153,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toEndOf="@+id/textView37"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
@@ -161,6 +161,7 @@
         android:id="@+id/imageButton5"
         android:layout_width="99dp"
         android:layout_height="87dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="96dp"
         android:background="@color/white"
@@ -168,7 +169,7 @@
         android:onClick="showAppointments"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/calendar" />
@@ -183,7 +184,7 @@
         android:onClick="showPens"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36"
         app:srcCompat="@drawable/padlock" />

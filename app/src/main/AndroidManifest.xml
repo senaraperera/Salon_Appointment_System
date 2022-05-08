@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SalonAppointmentSystem" >
+        android:theme="@style/Theme.SalonAppointmentSystem">
+        <activity
+            android:name=".CustomerPenalty"
+            android:exported="true" />
         <activity
             android:name=".customerProfilePage"
             android:exported="true" />
@@ -51,12 +54,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".customer_edit_profile"
-            android:exported="true" />
-        <activity
-            android:name=".customer_login"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true" /> <!-- service activities -->
         <activity
@@ -65,9 +62,9 @@
         <activity
             android:name=".salonViewServices"
             android:exported="true" /> <!-- -salon activities -->
-        <activity
-            android:name=".salonRegistration"
-            android:exported="true" />
+        <!-- <activity -->
+        <!-- android:name=".salonRegistration" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".salonRegistration_page2"
             android:exported="true" />
