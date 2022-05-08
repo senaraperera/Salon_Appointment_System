@@ -17,44 +17,17 @@
         android:background="#8CBBF1"
         android:gravity="center_horizontal"
         android:text="Pick A Salon"
-        android:textColor="@color/white"
-        android:textSize="26dp" />
+        android:textColor="@color/textColor"
+        android:textSize="26sp"
+        tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/saName"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/salonRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pickSalon"
-        android:hint="Salon Name"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"
-        />
-    <TextView
-        android:id="@+id/saAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/saName"
-        android:hint="Salon Address"
-        android:layout_marginTop="5dp"
-        android:textSize="20dp"
-        />
+        android:layout_height="538dp"
+        android:layout_below="@+id/pickSalon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
 
-    <TextView
-        android:id="@+id/saContact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/saAddress"
-        android:layout_marginTop="5dp"
-        android:hint="Salon Contact"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/saOpenHrs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/saContact"
-        android:layout_marginTop="5dp"
-        android:hint="Salon Open Hrs"
-        android:textSize="20dp" />
 
 </RelativeLayout>

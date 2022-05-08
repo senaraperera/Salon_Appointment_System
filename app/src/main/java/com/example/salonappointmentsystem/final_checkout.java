@@ -2,6 +2,7 @@ package com.example.salonappointmentsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,8 +19,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class final_checkout extends AppCompatActivity {
 
     EditText date;
-    TextView price, salonId, serviceId;
+    TextView price, salonId, serviceId, salName;
     Button checkout;
+    private String salId;
 
     DatabaseReference fireDB;
     Appointment appObj;
@@ -30,6 +32,7 @@ public class final_checkout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_checkout);
 
+        salName = findViewById(R.id.chksalonName);
         date = findViewById(R.id.date);
         price = findViewById(R.id.price);
         salonId = findViewById(R.id.chksalonName);
@@ -40,6 +43,15 @@ public class final_checkout extends AppCompatActivity {
 
         cusAuth = FirebaseAuth.getInstance();
 
+        //getsalonid and name from intent
+        Intent intent = getIntent();
+        String text = intent.getStringExtra(show_saloon_list.EXTRA);
+        salId = intent.getStringExtra(salonAdapter.EXTRAID);
+
+        salName.setText(text);
+
+
+        //check if customer has logged in
         if(cusAuth.getCurrentUser() == null){
             Toast.makeText(getApplicationContext(), "Login to your account first", Toast.LENGTH_SHORT).show();
         }
@@ -63,7 +75,7 @@ public class final_checkout extends AppCompatActivity {
             }else{
                 appObj.setAppDate(date.getText().toString().trim());
                 appObj.setCusID(cusAuth.getUid());
-                appObj.setSalonID(salonId.getText().toString().trim());
+                appObj.setSalonID(salId);
                 appObj.setServiceID(serviceId.getText().toString().trim());
                 appObj.setAmount(price.getText().toString().trim());
 
