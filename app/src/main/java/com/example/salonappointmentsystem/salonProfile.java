@@ -41,12 +41,14 @@ public class salonProfile extends AppCompatActivity {
     }
 
     public void deleteAcc(View view){
+        salAuth = FirebaseAuth.getInstance();
+        user = 
         DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Salon");
         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild("-N1X8IDJ_ufXGpMyhSDQ")){
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child("-N1X8IDJ_ufXGpMyhSDQ");
+                if(dataSnapshot.hasChild(salAuth.getUid())){
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child(salAuth.getUid());
                     dbRef.removeValue();
                     ClearControls();
 

@@ -17,24 +17,24 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class customer_login extends AppCompatActivity {
+public class salonLogin extends AppCompatActivity {
 
     EditText loginEmail;
     EditText loginPassword;
     Button loginButton;
 
-    FirebaseAuth cusAuth;
+    FirebaseAuth salAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_login);
+        setContentView(R.layout.activity_salon_login);
 
         loginEmail = findViewById(R.id.salonLoginEmail);
         loginPassword = findViewById(R.id.salonLoginPassword);
-        loginButton = findViewById(R.id.loginButtonForSalon);
+        loginButton = findViewById(R.id.button23);
 
-        cusAuth = FirebaseAuth.getInstance();
+        salAuth = FirebaseAuth.getInstance();
         loginButton.setOnClickListener(view -> {
             loginUser();
         });
@@ -44,7 +44,7 @@ public class customer_login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(customer_login.this, customerRegistration.class));
+                startActivity(new Intent(salonLogin.this, salonRegistrationNew.class));
             }
         });
     }
@@ -60,12 +60,12 @@ public class customer_login extends AppCompatActivity {
             loginPassword.setError("Password cannot be empty");
             loginPassword.requestFocus();
         }else {
-            cusAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            salAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(getApplicationContext(), "Logged in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
+                        startActivity(new Intent(getApplicationContext(), salonProfile.class));
                     }else {
                         Toast.makeText(getApplicationContext(), "Login Failed.", Toast.LENGTH_SHORT).show();
                     }

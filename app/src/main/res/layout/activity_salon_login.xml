@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginButtonForSalon"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".customer_login">
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="CUSTOMER LOGIN"
+        android:text="SALON LOGIN"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,25 +73,14 @@
 
     <TextView
         android:id="@+id/loginCustomer"
-        android:layout_width="94dp"
-        android:layout_height="17dp"
+        android:layout_width="176dp"
+        android:layout_height="19dp"
         android:layout_marginTop="16dp"
-        android:text="Login as Salon"
+        android:text="Login as Customer"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register" />
-
-    <Button
-        android:id="@+id/loginButtonForSalon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="login "
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginCustomer" />
 
     <ImageView
         android:id="@+id/logoImage"
@@ -101,4 +91,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
         app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginCustomer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
