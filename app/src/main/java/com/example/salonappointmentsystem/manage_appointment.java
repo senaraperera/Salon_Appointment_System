@@ -66,7 +66,6 @@ public class manage_appointment extends AppCompatActivity {
     }
 
     public void update(View view){
-        Toast.makeText(getApplicationContext(), ID,Toast.LENGTH_SHORT).show();
         app.setAppDate(date.getText().toString().trim());
         db.setValue(app);
     }
