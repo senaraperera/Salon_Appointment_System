@@ -12,8 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
+
             android:name=".editPersonalDetails"
             android:exported="false" />
+      <activity
+            android:name=".CustomerPenalty"
+            android:exported="true" />
+        <activity
+            android:name=".customerProfilePage"
+            android:exported="true" />
+        <activity
+            android:name=".customerEditDetails"
+            android:exported="true" />
+
         <activity
             android:name=".final_checkout"
             android:exported="true" />
@@ -22,13 +33,13 @@
             android:exported="true" />
         <activity
             android:name=".show_saloon_list"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".appointment_failed"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".appointment_success"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".customer_appointments"
             android:exported="true" />
@@ -56,9 +67,9 @@
         <activity
             android:name=".salonViewServices"
             android:exported="true" /> <!-- -salon activities -->
-        <activity
-            android:name=".salonRegistration"
-            android:exported="true" />
+        <!-- <activity -->
+        <!-- android:name=".salonRegistration" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".salonRegistration_page2"
             android:exported="true" />
@@ -77,6 +88,10 @@
         <activity
             android:name=".salonRegistrationNew"
             android:exported="true" />
+
+        <activity android:name=".manage_appointment"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

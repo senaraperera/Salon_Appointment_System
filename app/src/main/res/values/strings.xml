@@ -37,6 +37,10 @@
     <string name="salonLocation">LOCATION</string>
 
     <string name="serviceDescription">DESCRIPTION</string>
+    <string name="cusProfileButton1">Button 1</string>
+    <string name="cusProfileButton2">button 2</string>
+    <string name="cusProfileButton3">button3</string>
+    <string name="cusProfileButton4">button4</string>
     <string name="title_activity_salon_registration_new">salonRegistrationNew</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -128,6 +132,13 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="myApp">My Appointments</string>
+    <string name="appStyle">Style:</string>
+    <string name="appPrice">Price:</string>
+    <string name="appDate">Date:</string>
+    <string name="updateDate">UPDATE DATE</string>
+    <string name="deleteApp">DELETE APPOINTMENT</string>
+    <string name="date">dd/mm/yyyy</string>
 
 
 </resources>

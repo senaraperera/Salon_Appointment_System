@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="editProfile"
+    tools:context=".customerProfilePage">
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="415dp"
+        android:layout_height="219dp"
+        android:background="#8CBBF1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cpHelloName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <TextView
+        android:id="@+id/cpAppNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="05"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <TextView
+        android:id="@+id/cpPenNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="05"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <TextView
+        android:id="@+id/cpPen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="52dp"
+        android:text="Penalties"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <TextView
+        android:id="@+id/cpAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="Appointments"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/cpPen"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="92dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="68dp"
+        android:background="@color/white"
+        android:contentDescription="@string/cusProfileButton2"
+        android:onClick="deleteProfile"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view19"
+        app:srcCompat="@drawable/cancel" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="128dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="Delete Account"
+        android:textColor="#B10000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:contentDescription="@string/cusProfileButton4"
+        android:onClick="editProfile"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view19"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:text="Edit Profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:text="Appointments"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:text="Penalties"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toEndOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="99dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="96dp"
+        android:background="@color/white"
+        android:contentDescription="@string/cusProfileButton2"
+        android:onClick="showAppointments"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/calendar" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="92dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/white"
+        android:contentDescription="@string/cusProfileButton1"
+        android:onClick="showPens"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
+        app:srcCompat="@drawable/padlock" />
+
+    <Button
+        android:id="@+id/cusProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="logOut"
+        android:text="Log out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
