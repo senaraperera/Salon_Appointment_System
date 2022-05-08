@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class customerRegistration extends AppCompatActivity {
 
     //Register Customer section
-    EditText cusName, cusEmail, cusPhone, cusPassword, cusConfirmPassword;
+    EditText cusName, cusEmail, cusPhone, cusAddress , cusPassword, cusConfirmPassword;
     Button registerCusButton;
     Customer cusObj;
     DatabaseReference dbReg;
@@ -37,11 +36,12 @@ public class customerRegistration extends AppCompatActivity {
         setContentView(R.layout.activity_customer_registration);
 
         //Register Customer section
-        cusName = findViewById(R.id.regName);
-        cusEmail = findViewById(R.id.regEmail);
-        cusPhone = findViewById(R.id.regPhone);
-        cusPassword = findViewById(R.id.regPassword);
-        cusConfirmPassword = findViewById(R.id.regConfirmPassword);
+        cusName = findViewById(R.id.cusRegName);
+        cusEmail = findViewById(R.id.cusRegEmail);
+        cusAddress = findViewById(R.id.cusRegAddress);
+        cusPhone = findViewById(R.id.cusRegPhone);
+        cusPassword = findViewById(R.id.cusRegPassword);
+        cusConfirmPassword = findViewById(R.id.cusRegConfirmPassword);
         registerCusButton = findViewById(R.id.regRegisterButton);
         cusObj = new Customer();
 
@@ -61,6 +61,7 @@ public class customerRegistration extends AppCompatActivity {
     public void ClearControls(){
         cusName.setText("");
         cusEmail.setText("");
+        cusAddress.setText("");
         cusPhone.setText("");
         cusPassword.setText("");
         cusConfirmPassword.setText("");
@@ -76,6 +77,8 @@ public class customerRegistration extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please enter your Email", Toast.LENGTH_SHORT).show();
             }else if(TextUtils.isEmpty(cusPhone.getText().toString())){
                 Toast.makeText(getApplicationContext(), "Please enter your Phone", Toast.LENGTH_SHORT).show();
+            }else if(TextUtils.isEmpty(cusAddress.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter your Address", Toast.LENGTH_SHORT).show();
             }else if(TextUtils.isEmpty(cusPassword.getText().toString())){
                 Toast.makeText(getApplicationContext(), "Please enter your Password", Toast.LENGTH_SHORT).show();
             }else{
@@ -87,7 +90,8 @@ public class customerRegistration extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             cusObj.setName(cusName.getText().toString().trim());
-                            cusObj.setPhone(Integer.parseInt(cusPhone.getText().toString().trim()));
+                            cusObj.setAddress(cusAddress.getText().toString().trim());
+                            cusObj.setPhone(cusPhone.getText().toString().trim());
                             dbReg.child(cusAuth.getUid()).setValue(cusObj);
                             Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                             ClearControls();

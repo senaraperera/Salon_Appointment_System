@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
-            android:name=".manage_appointment"
+            android:name=".CustomerPenalty"
+            android:exported="true" />
+        <activity
+            android:name=".customerProfilePage"
+            android:exported="true" />
+        <activity
+            android:name=".customerEditDetails"
             android:exported="true" />
         <activity
             android:name=".final_checkout"
@@ -56,9 +62,9 @@
         <activity
             android:name=".salonViewServices"
             android:exported="true" /> <!-- -salon activities -->
-        <activity
-            android:name=".salonRegistration"
-            android:exported="true" />
+        <!-- <activity -->
+        <!-- android:name=".salonRegistration" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".salonRegistration_page2"
             android:exported="true" />

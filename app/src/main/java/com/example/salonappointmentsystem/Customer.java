@@ -3,7 +3,8 @@ package com.example.salonappointmentsystem;
 public class Customer {
     private String name;
     private String email;
-    private Integer phone;
+    private String address;
+    private String phone;
     private String password;
 
     public Customer() {}
@@ -16,6 +17,14 @@ public class Customer {
         this.name = name;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -24,11 +33,11 @@ public class Customer {
         this.email = email;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
