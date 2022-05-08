@@ -14,6 +14,9 @@
         <activity
             android:name=".customerDeleteProfile"
             android:exported="true" />
+        <activity   
+            android:name=".salonLogin"
+            android:exported="true" />
         <activity
             android:name=".editPersonalDetails"
             android:exported="false" />
@@ -26,8 +29,12 @@
         <activity
             android:name=".customerEditDetails"
             android:exported="true" />
-
         <activity
+
+            android:name=".manage_appointment"
+            android:exported="true" />
+        <activity
+
             android:name=".final_checkout"
             android:exported="true" />
         <activity
@@ -69,12 +76,11 @@
         <activity
             android:name=".salonViewServices"
             android:exported="true" /> <!-- -salon activities -->
-        <!-- <activity -->
-        <!-- android:name=".salonRegistration" -->
-        <!-- android:exported="true" /> -->
+
         <activity
             android:name=".salonRegistration_page2"
             android:exported="true" />
+
         <activity
             android:name=".salonProfile"
             android:exported="true" />
@@ -90,8 +96,10 @@
         <activity
             android:name=".salonRegistrationNew"
             android:exported="true" />
-        <activity android:name=".manage_appointment"
-            android:exported="true"/>
+
+        <activity
+            android:name=".manage_appointment"
+            android:exported="true" />
 
     </application>
 

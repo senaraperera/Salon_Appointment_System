@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +25,7 @@ public class salonProfile extends AppCompatActivity {
     Button btn_edit;
     DatabaseReference dbRef;
     FirebaseAuth salAuth;
+    FirebaseUser user;
 
     public void editProfile(View view){
         startActivity(new Intent(getApplicationContext(), editProfile.class));
@@ -41,12 +43,15 @@ public class salonProfile extends AppCompatActivity {
     }
 
     public void deleteAcc(View view){
+        salAuth = FirebaseAuth.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+
         DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Salon");
         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild("-N1X8IDJ_ufXGpMyhSDQ")){
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child("-N1X8IDJ_ufXGpMyhSDQ");
+                if(dataSnapshot.hasChild(salAuth.getUid())){
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("Salon").child(salAuth.getUid());
                     dbRef.removeValue();
                     ClearControls();
 

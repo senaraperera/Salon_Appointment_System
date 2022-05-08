@@ -111,7 +111,7 @@ public class salonRegistrationNew extends AppCompatActivity {
 
                             Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                             ClearControls();
-                            startActivity(new Intent(salonRegistrationNew.this, customer_login.class));
+                            startActivity(new Intent(salonRegistrationNew.this, salonLogin.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                         }

@@ -9,7 +9,8 @@ public class salon  {
     private String nameOfOwner;
     private Integer phone;
     private String password;
-private  String id;
+
+    private String id;
     private String email;
 
 
