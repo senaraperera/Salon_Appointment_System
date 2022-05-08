@@ -40,26 +40,28 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="181dp"
-        android:layout_height="27dp"
+        android:layout_width="373dp"
+        android:layout_height="26dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
         android:text="Salon Rich Look"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="336dp"
-        android:layout_height="25dp"
+        android:layout_width="374dp"
+        android:layout_height="21dp"
         android:fontFamily="sans-serif-medium"
         android:text="Owned by Beautician Ms.Senara Hapuarachchi"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -69,8 +71,9 @@
         android:layout_height="37dp"
         android:layout_marginTop="4dp"
         android:text="We provide you the best services for best prices.Feel free to contact us anytime through the given number"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -137,9 +140,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-medium"
-        android:text="9.00 am to 8.00 pm Monday to Friday"
+        android:text=" Monday to Friday"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="9.00 am to 8.00 pm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -148,8 +163,10 @@
         android:layout_width="188dp"
         android:layout_height="50dp"
         android:layout_marginTop="188dp"
+        android:onClick="editProfile"
         android:text="Edit Profile"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -157,8 +174,10 @@
         android:id="@+id/button12"
         android:layout_width="185dp"
         android:layout_height="49dp"
-        android:text="Change Password"
+        android:onClick="deleteAcc"
+        android:text="Delete Account"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button11" />
 
