@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +27,7 @@ public class manage_appointment extends AppCompatActivity {
     DatabaseReference readDB;
     FirebaseAuth cusAuth;
     String ID;
+    Appointment app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,22 @@ public class manage_appointment extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
+        });
+    }
+
+    public void update(View view){
+        Toast.makeText(getApplicationContext(), ID,Toast.LENGTH_SHORT).show();
+        app.setAppDate(date.getText().toString().trim());
+        readDB.child("Appointment").child(ID).setValue(app).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(), "Date updated",Toast.LENGTH_SHORT).show();
+                }else{
+                    task.getException().printStackTrace();
+                }
+            }
         });
     }
 }

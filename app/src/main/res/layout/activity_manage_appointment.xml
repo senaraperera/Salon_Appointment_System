@@ -11,6 +11,7 @@
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
+        android:onClick="update"
         android:text="@string/updateDate"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
