@@ -2,15 +2,9 @@ package com.example.salonappointmentsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,13 +21,6 @@ public class show_saloon_list extends AppCompatActivity {
     ArrayList<salon> list;
     DatabaseReference fireDB;
     salonAdapter adapter;
-
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        startActivity(new Intent(show_saloon_list.this, final_checkout.class));
-//        finish();
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,10 +51,5 @@ public class show_saloon_list extends AppCompatActivity {
 
             }
         });
-
     }
-
-
-
-
 }

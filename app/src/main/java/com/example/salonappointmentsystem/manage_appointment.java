@@ -22,11 +22,10 @@ public class manage_appointment extends AppCompatActivity {
     TextView price, style;
     EditText date;
     DatabaseReference readDB;
-    Appointment appObj;
-    FirebaseAuth cusAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_appointment);
 
@@ -36,7 +35,7 @@ public class manage_appointment extends AppCompatActivity {
         style = findViewById(R.id.appData1);
         date = findViewById(R.id.editTextDate);
 
-        readDB = FirebaseDatabase.getInstance().getReference().child("Appointment").child("N1TT5UWtVPIkV2QpkBB");
+        readDB = FirebaseDatabase.getInstance().getReference().child("Appointment").child("-N1X3QgF59Nhv9Pxdj6Y");
         readDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -49,13 +48,8 @@ public class manage_appointment extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "You do not have appointments", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError error) {}
         });
-
-
     }
 }
