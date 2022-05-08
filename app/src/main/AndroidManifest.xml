@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
             android:name=".salonRegistrationFinal"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".customerDeleteProfile"
             android:exported="true" />
