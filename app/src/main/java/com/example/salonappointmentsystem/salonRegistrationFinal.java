@@ -20,8 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class salonRegistrationFinal extends AppCompatActivity {
 
-
-
     EditText salOName, salPhone,salEmail, salPassword, salConfirmPassword,salName, salLocation, salDescription, sDay, sTime;
     Button btn_submit;
     salon salOb;
@@ -33,8 +31,6 @@ public class salonRegistrationFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salon_registration_new);
-
-
 
         salEmail = findViewById(R.id.editTextTextPersonName23);
         salPassword = findViewById(R.id.editTextTextPersonName15);
@@ -128,13 +124,6 @@ public class salonRegistrationFinal extends AppCompatActivity {
 
                 });
             }
-
-
-
-
-
-
-
             //This is to send to the login page
             //startActivity(new Intent(getApplicationContext(), customer_login.class));
 
