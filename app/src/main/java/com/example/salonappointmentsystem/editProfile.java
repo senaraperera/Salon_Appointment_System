@@ -127,10 +127,7 @@ public class editProfile extends AppCompatActivity {
 //    DatabaseReference db;
 
 
-    public void redirectToProfile(View view){
-        startActivity(new Intent(getApplicationContext(), salonProfile.class));
-        Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
