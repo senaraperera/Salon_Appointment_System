@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonAppointmentSystem">
         <activity
-
+            android:name=".customerDeleteProfile"
+            android:exported="true" />
+        <activity   
             android:name=".salonLogin"
             android:exported="true" />
         <activity
