@@ -9,7 +9,7 @@ public class salon  {
     private String nameOfOwner;
     private Integer phone;
     private String password;
-
+    private String id;
 
     private String nameOfSalon;
     private String location;
@@ -21,8 +21,13 @@ public class salon  {
     public salon() {
     }
 
+    public String getId() {
+        return id;
+    }
 
-
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNameOfOwner() {
         return nameOfOwner;
