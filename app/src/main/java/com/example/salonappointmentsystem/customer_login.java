@@ -65,8 +65,8 @@ public class customer_login extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(getApplicationContext(), "Logged in successfully", Toast.LENGTH_SHORT).show();
-//                        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
-                        startActivity(new Intent(getApplicationContext(), customerProfilePage.class));
+                        startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
+//                        startActivity(new Intent(getApplicationContext(), customerProfilePage.class));
                     }else {
                         Toast.makeText(getApplicationContext(), "Login Failed.", Toast.LENGTH_SHORT).show();
                     }
