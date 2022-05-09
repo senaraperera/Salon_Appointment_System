@@ -27,6 +27,11 @@ public class salonRegistrationFinal extends AppCompatActivity {
     DatabaseReference dbRef;
     FirebaseAuth salAuth;
 
+    public void ReturnToLogin(View view){
+        startActivity(new Intent(getApplicationContext(), salonLogin.class));
+        Toast.makeText(getApplicationContext(), "Services", Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +57,14 @@ public class salonRegistrationFinal extends AppCompatActivity {
         salOb = new salon();
         salAuth = FirebaseAuth.getInstance();
 
+
+        /* VALIDATIONS */
+
+        
+
     }
-    public void Cancel1(View view){
-        startActivity(new Intent(getApplicationContext(), salonLogin.class));
-        Toast.makeText(getApplicationContext(), "Services", Toast.LENGTH_SHORT).show();
-    }
+
+
     public void ClearControls(){
         salOName.setText(" ");
         salPhone.setText(" ");
