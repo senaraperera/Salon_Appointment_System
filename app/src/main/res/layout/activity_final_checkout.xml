@@ -128,12 +128,12 @@
         android:layout_marginStart="116dp"
         android:ems="10"
         android:hint="dd/mm/yyyy"
+        android:importantForAutofill="no"
         android:inputType="date"
         android:minHeight="48dp"
-        android:text="26/06/2022"
         android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/dateLabel"
         app:layout_constraintStart_toEndOf="@+id/dateLabel"
-        android:importantForAutofill="no" />
+        tools:text="26/06/2022" />
 </androidx.constraintlayout.widget.ConstraintLayout>
