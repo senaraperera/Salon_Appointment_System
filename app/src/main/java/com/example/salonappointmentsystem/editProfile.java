@@ -82,6 +82,7 @@ public class editProfile extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(editProfile.this, salonProfile.class));
                 }else{
                     task.getException().printStackTrace();
                 }
