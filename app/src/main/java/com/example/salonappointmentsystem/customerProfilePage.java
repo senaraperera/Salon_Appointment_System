@@ -73,7 +73,7 @@ public class customerProfilePage extends AppCompatActivity {
 
     public void deleteProfile(View view){
         startActivity(new Intent(getApplicationContext(), customerDeleteProfile.class));
-        Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "You are about to delete your account!", Toast.LENGTH_SHORT).show();
     }
 
     public void showAppointments(View view){
@@ -83,7 +83,7 @@ public class customerProfilePage extends AppCompatActivity {
 
     public void showPens(View view){
         startActivity(new Intent(getApplicationContext(), CustomerPenalty.class));
-        Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "!", Toast.LENGTH_SHORT).show();
     }
 
     public void logOut(View view){
