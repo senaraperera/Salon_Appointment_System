@@ -50,7 +50,7 @@ public class customerRegistration extends AppCompatActivity {
         loginNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Login page", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(customerRegistration.this, customer_login.class));
             }
         });
