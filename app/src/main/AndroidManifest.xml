@@ -16,7 +16,8 @@
             android:exported="true" />
         <activity
             android:name=".customerDeleteProfile"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".customerProfilePage"/>
         <activity
             android:name=".salonLogin"
             android:exported="true" />
@@ -25,13 +26,15 @@
             android:exported="false" />
         <activity
             android:name=".CustomerPenalty"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".customerProfilePage"/>
         <activity
             android:name=".customerProfilePage"
             android:exported="true" />
         <activity
             android:name=".customerEditDetails"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".customerProfilePage"/>
         <activity
             android:name=".manage_appointment"
             android:exported="true" />

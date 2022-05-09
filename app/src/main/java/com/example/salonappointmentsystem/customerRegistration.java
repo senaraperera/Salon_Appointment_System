@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class customerRegistration extends AppCompatActivity {
 
     //Register Customer section
-    EditText cusName, cusEmail, cusPhone, cusAddress , cusPassword, cusConfirmPassword;
+    EditText cusName, cusEmail, cusPhone, cusAddress, cusPassword, cusConfirmPassword;
     Button registerCusButton;
     Customer cusObj;
     DatabaseReference dbReg;
@@ -50,14 +50,14 @@ public class customerRegistration extends AppCompatActivity {
         loginNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Login page", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(customerRegistration.this, customer_login.class));
             }
         });
     }
 
 
-    public void ClearControls(){
+    public void ClearControls() {
         cusName.setText("");
         cusEmail.setText("");
         cusAddress.setText("");
@@ -66,28 +66,32 @@ public class customerRegistration extends AppCompatActivity {
         cusConfirmPassword.setText("");
     }
 
-    public void CreateData(View view){
+    public void CreateData(View view) {
         dbReg = FirebaseDatabase.getInstance().getReference().child("Customer");
 
-        try{
-            if(TextUtils.isEmpty(cusName.getText().toString())){
+        if(!validateName() | !validateEmail() | !validateAddress() | !validatePassword() | !validatePhone()){
+            return;
+        }
+
+        try {
+            if (TextUtils.isEmpty(cusName.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
-            }else if(TextUtils.isEmpty(cusEmail.getText().toString())){
+            } else if (TextUtils.isEmpty(cusEmail.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Please enter your Email", Toast.LENGTH_SHORT).show();
-            }else if(TextUtils.isEmpty(cusPhone.getText().toString())){
+            } else if (TextUtils.isEmpty(cusPhone.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Please enter your Phone", Toast.LENGTH_SHORT).show();
-            }else if(TextUtils.isEmpty(cusAddress.getText().toString())) {
+            } else if (TextUtils.isEmpty(cusAddress.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Please enter your Address", Toast.LENGTH_SHORT).show();
-            }else if(TextUtils.isEmpty(cusPassword.getText().toString())){
+            } else if (TextUtils.isEmpty(cusPassword.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Please enter your Password", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 String email = cusEmail.getText().toString().trim();
                 String password = cusPassword.getText().toString().trim();
 
-                cusAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                cusAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             cusObj.setName(cusName.getText().toString().trim());
                             cusObj.setAddress(cusAddress.getText().toString().trim());
                             cusObj.setPhone(cusPhone.getText().toString().trim());
@@ -95,18 +99,92 @@ public class customerRegistration extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                             ClearControls();
                             startActivity(new Intent(customerRegistration.this, customer_login.class));
-                        }else {
+                        } else {
                             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             Toast.makeText(getApplicationContext(), "invalid Number format", Toast.LENGTH_SHORT).show();
-        };
+        }
+        ;
     }
 
+    private boolean validateName() {
+        String val = cusName.getText().toString().trim();
+        if (val.isEmpty()) {
+            cusName.setError("You cannot leave the name empty");
+            return false;
+        } else {
+            cusName.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
 
+    private boolean validateEmail() {
+        String val = cusEmail.getText().toString().trim();
+        String checkEmail = "[a-zA-Z0-9._]+@[a-z]+\\.+[a-z]+";
+        if (val.isEmpty()) {
+            cusEmail.setError("You cannot leave the email empty");
+            return false;
+        } else if (!val.matches(checkEmail)){
+            cusEmail.setError("Invalid Email");
+            return false;
+        }else{
+            cusEmail.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
 
+    private boolean validatePhone() {
+        String val = cusPhone.getText().toString().trim();
+        String checkphone = "[0-9]+";
+        if (val.isEmpty()) {
+            cusPhone.setError("You cannot leave the phone empty");
+            return false;
+        } else if (!val.matches(checkphone)){
+            cusPhone.setError("Invalid phone. Enter numbers only");
+            return false;
+        }else{
+            cusPhone.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
 
+    private boolean validateAddress() {
+        String val = cusAddress.getText().toString().trim();
+        if (val.isEmpty()) {
+            cusAddress.setError("You cannot leave the address empty");
+            return false;
+        } else {
+            cusAddress.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
+
+    private boolean validatePassword() {
+        String val = cusPassword.getText().toString().trim();
+        String val2 = cusConfirmPassword.getText().toString().trim();
+        String checkPassword = "^" + ".{8,}+";
+        if (val.isEmpty()) {
+            cusPassword.setError("You cannot leave the address empty");
+            return false;
+      } else if(val == val2){
+            cusPassword.setError("Password does not match");
+            return false;
+        }else if(!val.matches(checkPassword)){
+            cusPassword.setError("Must contain 8 minimum characters");
+            return false;
+        }else{
+            cusPassword.setError(null);
+//            cusName.setErrorEnabled
+
+            return true;
+        }
+    }
 }

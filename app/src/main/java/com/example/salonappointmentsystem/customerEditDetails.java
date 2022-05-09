@@ -3,6 +3,7 @@ package com.example.salonappointmentsystem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,7 +55,7 @@ public class customerEditDetails extends AppCompatActivity {
                     }
                 });
 
-        Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
     }
 
     EditText editName;
@@ -83,6 +84,7 @@ public class customerEditDetails extends AppCompatActivity {
               public void onComplete(@NonNull Task<Void> task) {
                   if(task.isSuccessful()){
                       Toast.makeText(getApplicationContext(), "Yay! Data Updated!", Toast.LENGTH_SHORT).show();
+                      startActivity(new Intent(getApplicationContext(), customerProfilePage.class));
                   }else{
                       task.getException().printStackTrace();
                   }
