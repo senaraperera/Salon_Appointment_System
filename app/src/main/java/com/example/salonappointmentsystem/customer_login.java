@@ -43,7 +43,7 @@ public class customer_login extends AppCompatActivity {
         loginNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Works", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Register", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(customer_login.this, customerRegistration.class));
             }
         });
@@ -68,13 +68,10 @@ public class customer_login extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), show_saloon_list.class));
 //                        startActivity(new Intent(getApplicationContext(), customerProfilePage.class));
                     }else {
-                        Toast.makeText(getApplicationContext(), "Login Failed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Login Failed. Incorrect details!.", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
-
-
-
     }
 }

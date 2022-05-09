@@ -48,7 +48,7 @@ public class customerDeleteProfile extends AppCompatActivity {
 
 
                 }else
-                    Toast.makeText(getApplicationContext(), "No Source To Display", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No data to be displayed", Toast.LENGTH_SHORT).show();
             }
 
             @Override
