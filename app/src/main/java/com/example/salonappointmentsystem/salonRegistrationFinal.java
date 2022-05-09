@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class salonRegistrationFinal extends AppCompatActivity {
 
 
+
     EditText salOName, salPhone,salEmail, salPassword, salConfirmPassword,salName, salLocation, salDescription, sDay, sTime;
     Button btn_submit;
     salon salOb;
@@ -52,6 +53,7 @@ public class salonRegistrationFinal extends AppCompatActivity {
         sDay = findViewById(R.id.editTextTextPersonName24);
         sTime = findViewById(R.id.editTextTextPersonName25);
 
+
         btn_submit = findViewById(R.id.button20);
 
         salOb = new salon();
@@ -79,6 +81,9 @@ public class salonRegistrationFinal extends AppCompatActivity {
 
     public void CreateData(View view){
 
+        if(!validateSalonOwnerName() | !validateEmail() | !validatePassword() | !validatePhone()   | !validateSalonName() | !validateLocation() | !validateDescription() | !validateDay() | !validateTime() ){
+            return;
+        }
         dbRef = FirebaseDatabase.getInstance().getReference().child("Salon");
 
         try{
@@ -143,5 +148,123 @@ public class salonRegistrationFinal extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "invalid Number format", Toast.LENGTH_SHORT).show();
         }
     }
+    //VALIDATIONS FOR THE INPUT FIELDS=============================================================================
+    public boolean validateSalonOwnerName(){
+        String val = salOName.getText().toString().trim();
+        if(val.isEmpty()){
+            salOName.setError("You cannot leave the name empty");
+            return false;
+        }else{
+            salOName.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateEmail() {
+        String val = salEmail.getText().toString().trim();
+        String checkEmail = "[a-zA-Z0-9._]+@[a-z]+\\.+[a-z]+";
+        if (val.isEmpty()) {
+            salEmail.setError("You cannot leave the email empty");
+            return false;
+        } else if (!val.matches(checkEmail)){
+            salEmail.setError("Invalid Email");
+            return false;
+        }else{
+            salEmail.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
+
+    private boolean validatePhone() {
+        String val = salPhone.getText().toString().trim();
+        String checkphone = "[0-9]+";
+        if (val.isEmpty()) {
+            salPhone.setError("You cannot leave the phone empty");
+            return false;
+        } else if (!val.matches(checkphone)){
+            salPhone.setError("Invalid phone. Enter numbers only");
+            return false;
+        }else{
+            salPhone.setError(null);
+//            cusName.setErrorEnabled
+            return true;
+        }
+    }
+
+    private boolean validatePassword() {
+        String val = salPassword.getText().toString().trim();
+        String val2 = salConfirmPassword.getText().toString().trim();
+        String checkPassword = "^" + ".{8,}+";
+        if (val.isEmpty()) {
+            salPassword.setError("You cannot leave the password empty");
+            return false;
+        } else if(val == val2){
+            salPassword.setError("Password does not match");
+            return false;
+            }else if(!val.matches(checkPassword)){
+            salPassword.setError("Must contain 8 minimum characters");
+            return false;
+        }else{
+            salPassword.setError(null);
+//            cusName.setErrorEnabled
+
+            return true;
+        }
+    }
+
+    public boolean validateSalonName(){
+        String val = salName.getText().toString().trim();
+        if(val.isEmpty()){
+            salName.setError("You cannot leave the Salon name empty");
+            return false;
+        }else{
+            salName.setError(null);
+            return true;
+        }
+    }
+    public boolean validateLocation(){
+        String val = salLocation.getText().toString().trim();
+        if(val.isEmpty()){
+            salLocation.setError("You cannot leave the location empty");
+            return false;
+        }else{
+            salLocation.setError(null);
+            return true;
+        }
+    }
+    public boolean validateDescription(){
+        String val = salDescription.getText().toString().trim();
+        if(val.isEmpty()){
+            salDescription.setError("You cannot leave the description empty");
+            return false;
+        }else{
+            salDescription.setError(null);
+            return true;
+        }
+    }
+    public boolean validateDay(){
+        String val = sDay.getText().toString().trim();
+        if(val.isEmpty()){
+            sDay.setError("You cannot leave the available days empty");
+            return false;
+        }else{
+            sDay.setError(null);
+            return true;
+        }
+    }
+    public boolean validateTime(){
+        String val = sTime.getText().toString().trim();
+        if(val.isEmpty()){
+            sTime.setError("You cannot leave the available times empty");
+            return false;
+        }else{
+            sTime.setError(null);
+            return true;
+        }
+    }
+
+
+
 
 }
