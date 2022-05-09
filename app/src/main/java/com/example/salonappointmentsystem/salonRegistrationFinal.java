@@ -60,9 +60,6 @@ public class salonRegistrationFinal extends AppCompatActivity {
         salAuth = FirebaseAuth.getInstance();
 
 
-
-
-
         /* VALIDATIONS */
 
         
