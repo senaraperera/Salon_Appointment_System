@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="05"
+        android:text="01"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="@+id/view19"
         app:layout_constraintHorizontal_bias="0.254"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="05"
+        android:text="00"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="@+id/view19"
         app:layout_constraintHorizontal_bias="0.765"
@@ -99,7 +99,7 @@
         android:textColor="#B10000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -147,12 +147,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Penalties"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toEndOf="@+id/textView37"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
