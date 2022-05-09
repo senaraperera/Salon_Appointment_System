@@ -109,7 +109,21 @@ public class final_checkout extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public boolean checkDateEmpty(){
+        String val = eDate. getText().toString().trim();
+        if(val.isEmpty()){
+            eDate.setError("The date field is empty");
+            return false;
+        }else{
+            eDate.setError(null);
+            return true;
+        }
+    }
+
     public void Checkout(View view){
+        if(!checkDateEmpty()){
+            return;
+        }
         fireDB = FirebaseDatabase.getInstance().getReference().child("Appointment");
 
         try{
